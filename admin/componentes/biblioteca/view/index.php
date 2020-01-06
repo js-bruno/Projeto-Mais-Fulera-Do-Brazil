@@ -1,17 +1,18 @@
 <?php
 
-  try {
+try {
     $pdo = new PDO("mysql:dbname=biblioteca;host=localhost", "root", "");
-
+    
   } catch(PDOException $e){
     echo "ERRO: ".$e->getMessage();
     exit; 
   }
   
   
-?>
+  ?>
 
 
+  
 
 
 <link rel="stylesheet" href="../../css/materialize.css">
@@ -27,7 +28,7 @@
         <h5><?php 
             
             
-        
+            
         ?></h5>
         <i class="fas fa-chart-bar"></i>
       </div>
@@ -57,12 +58,16 @@
        $sql = $pdo->query($sql);
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
+          $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
+          $sqlG = $pdo->query($sqlG);
+          $sqlG = $sqlG->fetch();
+          
          ?>
       <tr>
         <td><?php print($livros['cod_livro']) ?></td>
         <td><?php print($livros['nome_livro']) ?></td>
         <td><?php print($livros['cod_autor']) ?></td>
-        <td><?php print($livros['cod_genero']) ?></td>
+        <td><?php print($sqlG['nome_genero']) ?></td> 
         <td><?php print($livros['status_livro']) ?></td>
         <td>
           <div class="switch">
