@@ -1,8 +1,12 @@
 <?php
-  $con = new PDO("mysql:host=localhost;dbname=biblioteca;charset=utf8", "root", "");
-  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt=$con->prepare('SELECT count(cod_livro) from livros');
-  
+
+  try {
+    $pdo = new PDO("mysql:dbname=biblioteca;host=localhost", "root", "");
+
+  } catch(PDOException $e){
+    echo "ERRO: ".$e->getMessage();
+    exit; 
+  }
   
   
 ?>
@@ -41,19 +45,25 @@
           <th>Cod</th>
           <th>Nome</th>
           <th>Autor</th>
-          <th>Categoria</th>
+          <th>Gênero</th>
           <th>Codigo do livro</th>
           <th>Em uso</th>
           <th> - </th>
         </tr>
       </thead>
       <tbody>
+      <?php
+       $sql = "SELECT * FROM livros";
+       $sql = $pdo->query($sql);
+       if($sql->rowCount() > 0){
+         foreach($sql->fetchAll() as $livros):
+         ?>
       <tr>
-        <td>01</td>
-        <td>Edson Dantas</td>
-        <td>sss</td>
-        <td>Romance</td>
-        <td>H34DTWASD009876</td>
+        <td><?php print($livros['cod_livro']) ?></td>
+        <td><?php print($livros['nome_livro']) ?></td>
+        <td><?php print($livros['cod_autor']) ?></td>
+        <td><?php print($livros['cod_genero']) ?></td>
+        <td><?php print($livros['status_livro']) ?></td>
         <td>
           <div class="switch">
             <label>
@@ -69,6 +79,10 @@
           <i class="fas fa-trash deletar-livro"></i>
         </td>
       </tr>
+     <?php
+      endforeach;
+      }
+    ?>
       </tbody>
     </table>
     <div class="lista-paginacao">
