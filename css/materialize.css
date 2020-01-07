@@ -2817,7 +2817,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
   height: 0;
 }
 
-.switch label input[type=checkbox]:checked + . {
+.switch label input[type=checkbox]:checked + .lever {
   background-color: #84c784c7;
 }
 
