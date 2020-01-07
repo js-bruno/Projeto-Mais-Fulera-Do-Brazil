@@ -521,6 +521,7 @@ nav .menu-lateral button{
   border: solid #e2e2e2 1px;
   color: #78ad78 ;
   width: 18%;
+  height: 50px;
   border-radius: 4px;
   text-align: left;
   transition: .2s ease;

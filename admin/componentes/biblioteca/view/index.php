@@ -20,18 +20,22 @@ try {
   <div class="resumo">
     <div class="total">
       <h4>Total</h4>
-      <h5></h5>
+      <h5>
+      <?php 
+$sql = "SELECT count(*) as t FROM livros";
+$sql = $pdo->query($sql);
+$sql = $sql->fetch();
+$total = $sql['t'];
+echo $total;
+
+
+?>
+      
+      
+      </h5>
       <i class="fas fa-chart-line"></i>
     </div>
-      <div class="total">
-        <h4>Total em uso</h4>
-        <h5><?php 
-            
-            
-            
-        ?></h5>
-        <i class="fas fa-chart-bar"></i>
-      </div>
+      
       <button><i class="fas fa-plus"></i> Adicionar</button>
     <form>
       <input placeholder="Procurar" type="search">
