@@ -20,13 +20,14 @@ try {
     <div class="total" style="height:50px">
       <h4>Total</h4>
       <h5>
-      <?php 
-$sql = "SELECT count(*) as t FROM livros";
-$sql = $pdo->query($sql);
-$sql = $sql->fetch();
-$total = $sql['t'];
-echo $total;
-?>
+        <?php 
+          //Contagem de livros
+          $sql = "SELECT count(*) as t FROM livros";
+          $sql = $pdo->query($sql);
+          $sql = $sql->fetch();
+          $total = $sql['t'];
+          echo $total;
+        ?>
       
       
       </h5>
@@ -69,6 +70,7 @@ echo $total;
       <?php
        $sql = "SELECT * FROM livros";
        $sql = $pdo->query($sql);
+      
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
           $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
@@ -110,6 +112,7 @@ echo $total;
           </div>
         </td>
         <td>
+          <i class="fas fa-pen alugar-livro "href="" >ALUGAR</i>
           <i class="fas fa-pen editar-livro"></i>
           <?php echo "<a href=model.php?IID=".$livros['cod_livro']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
@@ -120,7 +123,12 @@ echo $total;
     ?>
       </tbody>
     </table>
-    <!--  -->
+    <!-- <div class="lista-paginacao">
+      <div class="item"><a href="#"><i class="fas fa-angle-left"></i></a></div>
+      <div class="item"><span>01</span></div>
+      <div class="item"><a href="#"><i class="fas fa-angle-right"></i></a></div>
+    </div> -->
+  </div>
 </div>
 <div id="barraLateral">
     <div class="overlay"></div>
@@ -162,6 +170,24 @@ $sql = $pdo->query($sql);
           <input type="text">
           <label>Nome</label>
           <input type="text">
+          <input type="submit" value="Atualizar">
+        </div>
+      </form>
+    </div>
+
+    <div class="alugarLivro">
+      <form>
+      <?php 
+
+        $sql2 = "SELECT * from usuarios";
+        $sql2 = $pdo->query($sql2);
+
+      ?>
+          <h4>Alugar</h4><i class="fas fa-times"></i>
+          <div class="conteudo-form">
+          <label>Usuario</label>
+          <input type="text">
+          <!-- Onde vai ficar os usuarios -->
           <input type="submit" value="Atualizar">
         </div>
       </form>

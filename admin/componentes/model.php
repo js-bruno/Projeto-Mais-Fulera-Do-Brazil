@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php 
 
 $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
@@ -85,7 +85,7 @@ if(isset($_GET['IIDGG'])){
 
    
 
-=======
+
 <?php 
 
 $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
@@ -172,4 +172,4 @@ if(isset($_GET['IIDGG'])){
 
    
 
->>>>>>> testeCarol
+

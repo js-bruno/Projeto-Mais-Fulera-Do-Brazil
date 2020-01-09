@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <html lang="pt">
   <head>
     <meta charset="utf-8">
@@ -80,7 +80,7 @@
       })
     </script>
   </body>
-=======
+
 <html lang="pt">
   <head>
     <meta charset="utf-8">
@@ -162,5 +162,5 @@
       })
     </script>
   </body>
->>>>>>> testeCarol
+
 </html>

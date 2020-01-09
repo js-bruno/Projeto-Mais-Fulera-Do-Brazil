@@ -5,8 +5,8 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-=======
-=======
+
+
  /*!
  * Materialize v0.100.2 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
@@ -14,7 +14,7 @@
  */
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36,8 +36,8 @@ if (typeof jQuery === 'undefined') {
   * Copyright © 2008 George McGinley Smith
   * All rights reserved.
   * https://raw.github.com/gdsmith/jquery-easing/master/LICENSE
-=======
-=======
+
+
  ; /*
   * jQuery Easing v1.4.0 - http://gsgd.co.uk/sandbox/jquery/easing/
   * Open source under the BSD License.
@@ -46,7 +46,7 @@ if (typeof jQuery === 'undefined') {
   * https://raw.github.com/gdsmith/jquery-easing/master/LICENSE
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
    */
 
 (function (factory) {
@@ -1299,8 +1299,8 @@ if (typeof exports !== 'undefined' && !exports.nodeType) {
  *
  * Copyright (c) 2013 ngryman
  * Licensed under the MIT license.
-=======
-=======
+
+
  /*
  * raf.js
  * https://github.com/ngryman/raf.js
@@ -1312,7 +1312,7 @@ if (typeof exports !== 'undefined' && !exports.nodeType) {
  * Licensed under the MIT license.
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   */
 (function (window) {
   var lastTime = 0,
@@ -1352,15 +1352,15 @@ if (typeof exports !== 'undefined' && !exports.nodeType) {
  * Generate approximated selector string for a jQuery object
  * @param {jQuery} obj  jQuery object to be parsed
  * @returns {string}
-=======
-=======
+
+
  /**
  * Generate approximated selector string for a jQuery object
  * @param {jQuery} obj  jQuery object to be parsed
  * @returns {string}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   */
 Materialize.objectSelectorString = function (obj) {
   var tagStr = obj.prop('tagName') || '';
@@ -1385,15 +1385,15 @@ Materialize.guid = function () {
  * Escapes hash from special characters
  * @param {string} hash  String returned from this.hash
  * @returns {string}
-=======
-=======
+
+
  /**
  * Escapes hash from special characters
  * @param {string} hash  String returned from this.hash
  * @returns {string}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   */
 Materialize.escapeHash = function (hash) {
   return hash.replace(/(:|\.|\[|\]|,|=)/g, "\\$1");
@@ -1419,8 +1419,8 @@ Materialize.elementOrParentIsFixed = function (element) {
  * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
  * @type {function}
  * @return {number}
-=======
-=======
+
+
  /**
  * Get time in ms
  * @license https://raw.github.com/jashkenas/underscore/master/LICENSE
@@ -1428,7 +1428,7 @@ Materialize.elementOrParentIsFixed = function (element) {
  * @return {number}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   */
 var getTime = Date.now || function () {
   return new Date().getTime();
@@ -1447,8 +1447,8 @@ var getTime = Date.now || function () {
  * @param {number} wait
  * @param {Object=} options
  * @returns {Function}
-=======
-=======
+
+
  /**
  * Returns a function, that, when invoked, will only be triggered at most once
  * during a given window of time. Normally, the throttled function will run
@@ -1462,7 +1462,7 @@ var getTime = Date.now || function () {
  * @returns {Function}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   */
 Materialize.throttle = function (func, wait, options) {
   var context, args, result;
@@ -1533,11 +1533,11 @@ if (Vel) {
  
       /****************
       Helper Functions
-=======
+
       /****************
       Helper Functions
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /****************
       Helper Functions
        ****************/
@@ -1632,15 +1632,15 @@ if (Vel) {
        * Check if object is children of panel header
        * @param  {Object}  object Jquery object
        * @return {Boolean} true if it is children
-=======
-=======
+
+
        /**
        * Check if object is children of panel header
        * @param  {Object}  object Jquery object
        * @return {Boolean} true if it is children
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         */
       function isChildrenOfPanelHeader(object) {
 
@@ -1655,15 +1655,15 @@ if (Vel) {
        * Get panel header from a children element
        * @param  {Object} object Jquery object
        * @return {Object} panel header object
-=======
-=======
+
+
        /**
        * Get panel header from a children element
        * @param  {Object} object Jquery object
        * @return {Object} panel header object
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         */
       function getPanelHeader(object) {
 
@@ -1784,12 +1784,12 @@ if (Vel) {
       /*
         Helper function to position and resize dropdown.
         Used in hover and click handler.
-=======
+
       /*
         Helper function to position and resize dropdown.
         Used in hover and click handler.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /*
         Helper function to position and resize dropdown.
         Used in hover and click handler.
@@ -2013,8 +2013,8 @@ if (Vel) {
      * @constructor
      * @param {jQuery} $el
      * @param {Object} options
-=======
-=======
+
+
    /**
    * @class
    *
@@ -2028,7 +2028,7 @@ if (Vel) {
      * @param {Object} options
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       */
     function Modal($el, options) {
       _classCallCheck(this, Modal);
@@ -2063,8 +2063,8 @@ if (Vel) {
       /**
        * Describes open/close state of modal
        * @type {Boolean}
-=======
-=======
+
+
        /**
        * The jQuery element
        * @type {jQuery}
@@ -2090,7 +2090,7 @@ if (Vel) {
        * @type {Boolean}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         */
       this.isOpen = false;
 
@@ -2114,11 +2114,11 @@ if (Vel) {
  
       /**
        * Get Instance
-=======
+
       /**
        * Get Instance
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Get Instance
         */
@@ -2130,11 +2130,11 @@ if (Vel) {
  
       /**
        * Teardown component
-=======
+
       /**
        * Teardown component
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Teardown component
         */
@@ -2155,11 +2155,11 @@ if (Vel) {
  
       /**
        * Setup Event Handlers
-=======
+
       /**
        * Setup Event Handlers
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Setup Event Handlers
         */
@@ -2181,11 +2181,11 @@ if (Vel) {
  
       /**
        * Remove Event Handlers
-=======
+
       /**
        * Remove Event Handlers
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Remove Event Handlers
         */
@@ -2205,12 +2205,12 @@ if (Vel) {
       /**
        * Handle Trigger Click
        * @param {Event} e
-=======
+
       /**
        * Handle Trigger Click
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Handle Trigger Click
        * @param {Event} e
@@ -2239,11 +2239,11 @@ if (Vel) {
  
       /**
        * Handle Overlay Click
-=======
+
       /**
        * Handle Overlay Click
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Handle Overlay Click
         */
@@ -2261,12 +2261,12 @@ if (Vel) {
       /**
        * Handle Modal Close Click
        * @param {Event} e
-=======
+
       /**
        * Handle Modal Close Click
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Handle Modal Close Click
        * @param {Event} e
@@ -2286,12 +2286,12 @@ if (Vel) {
       /**
        * Handle Keydown
        * @param {Event} e
-=======
+
       /**
        * Handle Keydown
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Handle Keydown
        * @param {Event} e
@@ -2310,11 +2310,11 @@ if (Vel) {
  
       /**
        * Animate in modal
-=======
+
       /**
        * Animate in modal
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Animate in modal
         */
@@ -2366,11 +2366,11 @@ if (Vel) {
  
       /**
        * Animate out modal
-=======
+
       /**
        * Animate out modal
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Animate out modal
         */
@@ -2414,12 +2414,12 @@ if (Vel) {
       /**
        * Open Modal
        * @param {jQuery} [$trigger]
-=======
+
       /**
        * Open Modal
        * @param {jQuery} [$trigger]
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Open Modal
        * @param {jQuery} [$trigger]
@@ -2455,11 +2455,11 @@ if (Vel) {
  
       /**
        * Close Modal
-=======
+
       /**
        * Close Modal
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Close Modal
         */
@@ -2507,12 +2507,12 @@ if (Vel) {
   /**
    * @static
    * @memberof Modal
-=======
+
   /**
    * @static
    * @memberof Modal
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * @static
    * @memberof Modal
@@ -2526,12 +2526,12 @@ if (Vel) {
   /**
    * @static
    * @memberof Modal
-=======
+
   /**
    * @static
    * @memberof Modal
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * @static
    * @memberof Modal
@@ -3362,8 +3362,8 @@ if (Vel) {
   * Copyright 2014 Alfiana E. Sibuea and other contributors
   * Released under the MIT license
   * https://github.com/fians/Waves/blob/master/LICENSE
-=======
-=======
+
+
  ; /*!
   * Waves v0.6.4
   * http://fian.my.id/Waves
@@ -3373,7 +3373,7 @@ if (Vel) {
   * https://github.com/fians/Waves/blob/master/LICENSE
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
    */
 
 ;(function (window) {
@@ -3592,8 +3592,8 @@ if (Vel) {
     /* uses an integer rather than bool so there's no issues with
      * needing to clear timeouts if another touch event occurred
      * within the 500ms. Cannot mouseup between touchstart and
-=======
-=======
+
+
    /**
    * Disable mousedown event for 500ms during and after touch
    */
@@ -3603,7 +3603,7 @@ if (Vel) {
      * within the 500ms. Cannot mouseup between touchstart and
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       * touchend, nor in the 500ms after touchend. */
     touches: 0,
     allowEvent: function (e) {
@@ -3633,12 +3633,12 @@ if (Vel) {
   /**
    * Delegated click handler for .waves-effect element.
    * returns null when .waves-effect element not in "click tree"
-=======
+
   /**
    * Delegated click handler for .waves-effect element.
    * returns null when .waves-effect element not in "click tree"
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Delegated click handler for .waves-effect element.
    * returns null when .waves-effect element not in "click tree"
@@ -3665,11 +3665,11 @@ if (Vel) {
  
   /**
    * Bubble the click and show effect if .waves-effect elem was found
-=======
+
   /**
    * Bubble the click and show effect if .waves-effect elem was found
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Bubble the click and show effect if .waves-effect elem was found
     */
@@ -3714,8 +3714,8 @@ if (Vel) {
    * bubble mouseup/mousedown events).
    *   Intended to be used with dynamically loaded forms/inputs, or
    * where the user doesn't want a delegated click handler.
-=======
-=======
+
+
    /**
    * Attach Waves to an input element (or any element which doesn't
    * bubble mouseup/mousedown events).
@@ -3723,7 +3723,7 @@ if (Vel) {
    * where the user doesn't want a delegated click handler.
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
   Waves.attach = function (element) {
     //FUTURE: automatically add waves classes and allow users
@@ -3771,12 +3771,12 @@ if (Vel) {
       /**
        * Options for the toast
        * @member Toast#options
-=======
+
       /**
        * Options for the toast
        * @member Toast#options
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Options for the toast
        * @member Toast#options
@@ -3800,8 +3800,8 @@ if (Vel) {
 
       /**
        * Time remaining until toast is removed
-=======
-=======
+
+
        /**
        * Describes current pan state toast
        * @type {Boolean}
@@ -3812,7 +3812,7 @@ if (Vel) {
        * Time remaining until toast is removed
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         */
       this.timeRemaining = this.options.displayLength;
 
@@ -3837,11 +3837,11 @@ if (Vel) {
  
       /**
        * Create toast and append it to toast container
-=======
+
       /**
        * Create toast and append it to toast container
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Create toast and append it to toast container
         */
@@ -3881,11 +3881,11 @@ if (Vel) {
  
       /**
        * Animate in toast
-=======
+
       /**
        * Animate in toast
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Animate in toast
         */
@@ -3906,12 +3906,12 @@ if (Vel) {
       /**
        * Create setInterval which automatically removes toast when timeRemaining >= 0
        * has been reached
-=======
+
       /**
        * Create setInterval which automatically removes toast when timeRemaining >= 0
        * has been reached
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Create setInterval which automatically removes toast when timeRemaining >= 0
        * has been reached
@@ -3941,11 +3941,11 @@ if (Vel) {
  
       /**
        * Dismiss toast with animation
-=======
+
       /**
        * Dismiss toast with animation
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Dismiss toast with animation
         */
@@ -3990,11 +3990,11 @@ if (Vel) {
  
       /**
        * Append toast container and add event handlers
-=======
+
       /**
        * Append toast container and add event handlers
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Append toast container and add event handlers
         */
@@ -4019,11 +4019,11 @@ if (Vel) {
  
       /**
        * Remove toast container and event handlers
-=======
+
       /**
        * Remove toast container and event handlers
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Remove toast container and event handlers
         */
@@ -4044,12 +4044,12 @@ if (Vel) {
       /**
        * Begin drag handler
        * @param {Event} e
-=======
+
       /**
        * Begin drag handler
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Begin drag handler
        * @param {Event} e
@@ -4076,12 +4076,12 @@ if (Vel) {
       /**
        * Drag move handler
        * @param {Event} e
-=======
+
       /**
        * Drag move handler
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Drag move handler
        * @param {Event} e
@@ -4110,12 +4110,12 @@ if (Vel) {
       /**
        * End drag handler
        * @param {Event} e
-=======
+
       /**
        * End drag handler
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * End drag handler
        * @param {Event} e
@@ -4153,12 +4153,12 @@ if (Vel) {
       /**
        * Get x position of mouse or touch event
        * @param {Event} e
-=======
+
       /**
        * Get x position of mouse or touch event
        * @param {Event} e
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Get x position of mouse or touch event
        * @param {Event} e
@@ -4178,11 +4178,11 @@ if (Vel) {
  
       /**
        * Remove all toasts
-=======
+
       /**
        * Remove all toasts
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Remove all toasts
         */
@@ -4210,15 +4210,15 @@ if (Vel) {
    * @static
    * @memberof Toast
    * @type {Array.<Toast>}
-=======
-=======
+
+
    /**
    * @static
    * @memberof Toast
    * @type {Array.<Toast>}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
 
 
@@ -4236,8 +4236,8 @@ if (Vel) {
    * @static
    * @memberof Toast
    * @type {Toast}
-=======
-=======
+
+
    /**
    * @static
    * @memberof Toast
@@ -4250,7 +4250,7 @@ if (Vel) {
    * @type {Toast}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
   Toast._draggedToast = null;
 
@@ -4667,8 +4667,8 @@ if (Vel) {
   * @license https://raw.github.com/thesmart/jquery-scrollspy/master/LICENSE
   * @see https://github.com/thesmart
   * @version 0.1.2
-=======
-=======
+
+
  ; /**
   * Extend jquery with a scrollspy plugin.
   * This watches the window scroll and fires events when elements are scrolled into viewport.
@@ -4682,7 +4682,7 @@ if (Vel) {
   * @version 0.1.2
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
    */
 (function ($) {
 
@@ -4707,8 +4707,8 @@ if (Vel) {
      * @param {number} bottom
      * @param {number} left
      * @return {jQuery}		A collection of elements
-=======
-=======
+
+
      /**
      * Find elements that are within the boundary
      * @param {number} top
@@ -4718,7 +4718,7 @@ if (Vel) {
      * @return {jQuery}		A collection of elements
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       */
   };function findElements(top, right, bottom, left) {
     var hits = $();
@@ -4744,11 +4744,11 @@ if (Vel) {
  
   /**
    * Called when the user scrolls the window
-=======
+
   /**
    * Called when the user scrolls the window
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Called when the user scrolls the window
     */
@@ -4794,11 +4794,11 @@ if (Vel) {
  
   /**
    * Called when window is resized
-=======
+
   /**
    * Called when window is resized
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Called when window is resized
    */
@@ -4819,8 +4819,8 @@ if (Vel) {
          offsetLeft : number -> offset from left. Default: 0
   			activeClass : string -> Class name to be added to the active link. Default: active
    * @returns {jQuery}
-=======
-=======
+
+
    /**
    * Enables ScrollSpy using a selector
    * @param {jQuery|string} selector  The elements collection, or a selector
@@ -4834,7 +4834,7 @@ if (Vel) {
    * @returns {jQuery}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
   $.scrollSpy = function (selector, options) {
     var defaults = {
@@ -4928,15 +4928,15 @@ if (Vel) {
    * Listen for window resize events
    * @param {Object=} options						Optional. Set { throttle: number } to change throttling. Default: 100 ms
    * @returns {jQuery}		$(window)
-=======
-=======
+
+
    /**
    * Listen for window resize events
    * @param {Object=} options						Optional. Set { throttle: number } to change throttling. Default: 100 ms
    * @returns {jQuery}		$(window)
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
   $.winSizeSpy = function (options) {
     $.winSizeSpy = function () {
@@ -4960,8 +4960,8 @@ if (Vel) {
   										offsetBottom : number -> offset from bottom. Default: 0
   										offsetLeft : number -> offset from left. Default: 0
    * @returns {jQuery}
-=======
-=======
+
+
    /**
    * Enables ScrollSpy on a collection of elements
    * e.g. $('.scrollSpy').scrollSpy()
@@ -4974,7 +4974,7 @@ if (Vel) {
    * @returns {jQuery}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     */
   $.fn.scrollSpy = function (options) {
     return $.scrollSpy($(this), options);
@@ -5146,12 +5146,12 @@ if (Vel) {
       /**
        * Resize if the new height is greater than the
        * original height of the textarea
-=======
+
       /**
        * Resize if the new height is greater than the
        * original height of the textarea
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Resize if the new height is greater than the
        * original height of the textarea
@@ -5165,15 +5165,15 @@ if (Vel) {
          * In case the new height is less than original height, it
          * means the textarea has less text than before
          * So we set the height to the original one
-=======
-=======
+
+
          /**
          * In case the new height is less than original height, it
          * means the textarea has less text than before
          * So we set the height to the original one
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
           */
         $textarea.css('height', $textarea.data('original-height'));
       }
@@ -5187,12 +5187,12 @@ if (Vel) {
       /**
        * Instead of resizing textarea on document load,
        * store the original height and the original length
-=======
+
       /**
        * Instead of resizing textarea on document load,
        * store the original height and the original length
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Instead of resizing textarea on document load,
        * store the original height and the original length
@@ -5222,11 +5222,11 @@ if (Vel) {
  
     /****************
     *  Range Input  *
-=======
+
     /****************
     *  Range Input  *
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /****************
     *  Range Input  *
      ****************/
@@ -5331,11 +5331,11 @@ if (Vel) {
  
     /**************************
      * Auto complete plugin  *
-=======
+
     /**************************
      * Auto complete plugin  *
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**************************
      * Auto complete plugin  *
       *************************/
@@ -5514,11 +5514,11 @@ if (Vel) {
  
   /*******************
    *  Select Plugin  *
-=======
+
   /*******************
    *  Select Plugin  *
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /*******************
    *  Select Plugin  *
     ******************/
@@ -5720,8 +5720,8 @@ if (Vel) {
        * @param {jQuery} collection  Select options jQuery element
        * @param {Element} newOption  element of the new option
        * @param {Boolean} firstActivation  If on first activation of select
-=======
-=======
+
+
        /**
        * Make option as selected and scroll to selected position
        * @param {jQuery} collection  Select options jQuery element
@@ -5729,7 +5729,7 @@ if (Vel) {
        * @param {Boolean} firstActivation  If on first activation of select
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         */
       var activateOption = function (collection, newOption, firstActivation) {
         if (newOption) {
@@ -6412,15 +6412,15 @@ if (Vel) {
      * Render chip jQuery element.
      * @param {Object} elem
      * @return {jQuery}
-=======
-=======
+
+
      /**
      * Render chip jQuery element.
      * @param {Object} elem
      * @return {jQuery}
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       */
     this.renderChip = function (elem) {
       if (!elem.tag) return;
@@ -6672,12 +6672,12 @@ if (Vel) {
   /**
    * Transform FAB into toolbar
    * @param  {Object}  object jQuery object
-=======
+
   /**
    * Transform FAB into toolbar
    * @param  {Object}  object jQuery object
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Transform FAB into toolbar
    * @param  {Object}  object jQuery object
@@ -6770,12 +6770,12 @@ if (Vel) {
   /**
    * Transform toolbar back into FAB
    * @param  {Object}  object jQuery object
-=======
+
   /**
    * Transform toolbar back into FAB
    * @param  {Object}  object jQuery object
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Transform toolbar back into FAB
    * @param  {Object}  object jQuery object
@@ -7068,8 +7068,8 @@ if (Vel) {
   * By Amsul, http://amsul.ca
   * Hosted on http://amsul.github.io/pickadate.js
   * Licensed under MIT
-=======
-=======
+
+
  ; /*!
   * pickadate.js v3.5.0, 2014/04/13
   * By Amsul, http://amsul.ca
@@ -7077,7 +7077,7 @@ if (Vel) {
   * Licensed under MIT
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
    */
 
 (function (factory) {
@@ -7093,11 +7093,11 @@ if (Vel) {
  
   /**
    * The picker constructor that creates a blank picker.
-=======
+
   /**
    * The picker constructor that creates a blank picker.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * The picker constructor that creates a blank picker.
     */
@@ -7144,11 +7144,11 @@ if (Vel) {
  
       /**
        * Initialize everything
-=======
+
       /**
        * Initialize everything
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Initialize everything
         */
@@ -7224,11 +7224,11 @@ if (Vel) {
  
       /**
        * Render a new picker
-=======
+
       /**
        * Render a new picker
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Render a new picker
         */
@@ -7246,11 +7246,11 @@ if (Vel) {
  
       /**
        * Destroy everything
-=======
+
       /**
        * Destroy everything
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Destroy everything
         */
@@ -7296,11 +7296,11 @@ if (Vel) {
  
       /**
        * Open up the picker
-=======
+
       /**
        * Open up the picker
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Open up the picker
         */
@@ -7413,11 +7413,11 @@ if (Vel) {
  
       /**
        * Close the picker
-=======
+
       /**
        * Close the picker
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Close the picker
         */
@@ -7471,11 +7471,11 @@ if (Vel) {
  
       /**
        * Clear the values
-=======
+
       /**
        * Clear the values
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Clear the values
         */
@@ -7488,11 +7488,11 @@ if (Vel) {
  
       /**
        * Set something
-=======
+
       /**
        * Set something
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Set something
         */
@@ -7544,11 +7544,11 @@ if (Vel) {
  
       /**
        * Get something
-=======
+
       /**
        * Get something
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Get something
         */
@@ -7590,11 +7590,11 @@ if (Vel) {
  
       /**
        * Bind events on the things.
-=======
+
       /**
        * Bind events on the things.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Bind events on the things.
         */
@@ -7639,11 +7639,11 @@ if (Vel) {
  
       /**
        * Unbind events on the things.
-=======
+
       /**
        * Unbind events on the things.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Unbind events on the things.
         */
@@ -7664,11 +7664,11 @@ if (Vel) {
  
       /**
        * Fire off method events.
-=======
+
       /**
        * Fire off method events.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Fire off method events.
         */
@@ -7692,11 +7692,11 @@ if (Vel) {
  
       /**
        * Wrap the picker holder components together.
-=======
+
       /**
        * Wrap the picker holder components together.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       /**
        * Wrap the picker holder components together.
         */
@@ -7735,11 +7735,11 @@ if (Vel) {
  
     /**
      * Prepare the input element with all bindings.
-=======
+
     /**
      * Prepare the input element with all bindings.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Prepare the input element with all bindings.
       */
@@ -7787,11 +7787,11 @@ if (Vel) {
  
     /**
      * Prepare the root picker element with all bindings.
-=======
+
     /**
      * Prepare the root picker element with all bindings.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Prepare the root picker element with all bindings.
       */
@@ -7898,11 +7898,11 @@ if (Vel) {
  
     /**
      * Prepare the hidden input element along with all bindings.
-=======
+
     /**
      * Prepare the hidden input element along with all bindings.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Prepare the hidden input element along with all bindings.
       */
@@ -7993,11 +7993,11 @@ if (Vel) {
  
   /**
    * The default classes and prefix to use for the HTML classes.
-=======
+
   /**
    * The default classes and prefix to use for the HTML classes.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * The default classes and prefix to use for the HTML classes.
     */
@@ -8027,11 +8027,11 @@ if (Vel) {
  
   /**
    * Check if the default theme is being used.
-=======
+
   /**
    * Check if the default theme is being used.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if the default theme is being used.
     */
@@ -8058,12 +8058,12 @@ if (Vel) {
   /**
    * Get the width of the browser’s scrollbar.
    * Taken from: https://github.com/VodkaBears/Remodal/blob/master/src/jquery.remodal.js
-=======
+
   /**
    * Get the width of the browser’s scrollbar.
    * Taken from: https://github.com/VodkaBears/Remodal/blob/master/src/jquery.remodal.js
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Get the width of the browser’s scrollbar.
    * Taken from: https://github.com/VodkaBears/Remodal/blob/master/src/jquery.remodal.js
@@ -8113,8 +8113,8 @@ if (Vel) {
             item:   {Function}
         }
      * `
-=======
-=======
+
+
    /**
    * PickerConstructor helper methods.
    */
@@ -8133,7 +8133,7 @@ if (Vel) {
      * `
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
       */
     group: function (groupObject) {
 
@@ -8171,11 +8171,11 @@ if (Vel) {
  
     /**
      * Create a dom node string
-=======
+
     /**
      * Create a dom node string
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Create a dom node string
       */
@@ -8202,11 +8202,11 @@ if (Vel) {
  
     /**
      * Lead numbers below 10 with a zero.
-=======
+
     /**
      * Lead numbers below 10 with a zero.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Lead numbers below 10 with a zero.
       */
@@ -8218,11 +8218,11 @@ if (Vel) {
  
     /**
      * Trigger a function otherwise return the value.
-=======
+
     /**
      * Trigger a function otherwise return the value.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Trigger a function otherwise return the value.
       */
@@ -8234,11 +8234,11 @@ if (Vel) {
  
     /**
      * If the second character is a digit, length is 2 otherwise 1.
-=======
+
     /**
      * If the second character is a digit, length is 2 otherwise 1.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * If the second character is a digit, length is 2 otherwise 1.
       */
@@ -8251,11 +8251,11 @@ if (Vel) {
  
     /**
      * Tell if something is a date object.
-=======
+
     /**
      * Tell if something is a date object.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Tell if something is a date object.
       */
@@ -8267,11 +8267,11 @@ if (Vel) {
  
     /**
      * Tell if something is an integer.
-=======
+
     /**
      * Tell if something is an integer.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Tell if something is an integer.
       */
@@ -8283,11 +8283,11 @@ if (Vel) {
  
     /**
      * Create ARIA attribute strings.
-=======
+
     /**
      * Create ARIA attribute strings.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Create ARIA attribute strings.
       */
@@ -8298,11 +8298,11 @@ if (Vel) {
  
     /**
      * Extend the picker with a component and defaults.
-=======
+
     /**
      * Extend the picker with a component and defaults.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     /**
      * Extend the picker with a component and defaults.
       */
@@ -8380,12 +8380,12 @@ if (Vel) {
 ; /*!
   * Date picker for pickadate.js v3.5.0
   * http://amsul.github.io/pickadate.js/date.htm
-=======
+
 ; /*!
   * Date picker for pickadate.js v3.5.0
   * http://amsul.github.io/pickadate.js/date.htm
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
 ; /*!
   * Date picker for pickadate.js v3.5.0
   * http://amsul.github.io/pickadate.js/date.htm
@@ -8399,11 +8399,11 @@ if (Vel) {
  
   /**
    * Globals and constants
-=======
+
   /**
    * Globals and constants
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Globals and constants
     */
@@ -8415,11 +8415,11 @@ if (Vel) {
  
   /**
    * The date picker constructor
-=======
+
   /**
    * The date picker constructor
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * The date picker constructor
     */
@@ -8527,11 +8527,11 @@ if (Vel) {
  
   /**
    * Set a datepicker item object.
-=======
+
   /**
    * Set a datepicker item object.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Set a datepicker item object.
     */
@@ -8578,11 +8578,11 @@ if (Vel) {
  
   /**
    * Get a datepicker item object.
-=======
+
   /**
    * Get a datepicker item object.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Get a datepicker item object.
     */
@@ -8595,11 +8595,11 @@ if (Vel) {
  
   /**
    * Create a picker date object.
-=======
+
   /**
    * Create a picker date object.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Create a picker date object.
     */
@@ -8655,12 +8655,12 @@ if (Vel) {
   /**
    * Create a range limit object using an array, date object,
    * literal “true”, or integer relative to another time.
-=======
+
   /**
    * Create a range limit object using an array, date object,
    * literal “true”, or integer relative to another time.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Create a range limit object using an array, date object,
    * literal “true”, or integer relative to another time.
@@ -8701,11 +8701,11 @@ if (Vel) {
  
   /**
    * Check if a date unit falls within a date range object.
-=======
+
   /**
    * Check if a date unit falls within a date range object.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if a date unit falls within a date range object.
     */
@@ -8718,11 +8718,11 @@ if (Vel) {
  
   /**
    * Check if two date range objects overlap.
-=======
+
   /**
    * Check if two date range objects overlap.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if two date range objects overlap.
     */
@@ -8741,11 +8741,11 @@ if (Vel) {
  
   /**
    * Get the date today.
-=======
+
   /**
    * Get the date today.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Get the date today.
     */
@@ -8761,11 +8761,11 @@ if (Vel) {
  
   /**
    * Navigate to next/prev month.
-=======
+
   /**
    * Navigate to next/prev month.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Navigate to next/prev month.
     */
@@ -8780,10 +8780,10 @@ if (Vel) {
  
  
         viewsetObject = this.item.view; /*,
-=======
+
         viewsetObject = this.item.view; /*,
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         viewsetObject = this.item.view; /*,
                                          safety = 100*/
 
@@ -8820,12 +8820,12 @@ if (Vel) {
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while navigating to ' + new Date( targetYear, targetMonth, targetDate ) + '.'
-=======
+
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while navigating to ' + new Date( targetYear, targetMonth, targetDate ) + '.'
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while navigating to ' + new Date( targetYear, targetMonth, targetDate ) + '.'
@@ -8843,11 +8843,11 @@ if (Vel) {
  
   /**
    * Normalize a date by setting the hours to midnight.
-=======
+
   /**
    * Normalize a date by setting the hours to midnight.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Normalize a date by setting the hours to midnight.
     */
@@ -8860,11 +8860,11 @@ if (Vel) {
  
   /**
    * Measure the range of dates.
-=======
+
   /**
    * Measure the range of dates.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Measure the range of dates.
     */
@@ -8895,11 +8895,11 @@ if (Vel) {
  
   /**
    * Create a viewset object based on navigation.
-=======
+
   /**
    * Create a viewset object based on navigation.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Create a viewset object based on navigation.
     */
@@ -8911,11 +8911,11 @@ if (Vel) {
  
   /**
    * Validate a date as enabled and shift if needed.
-=======
+
   /**
    * Validate a date as enabled and shift if needed.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Validate a date as enabled and shift if needed.
     */
@@ -8965,10 +8965,10 @@ if (Vel) {
  
  
     }).length; /*,
-=======
+
     }).length; /*,
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
     }).length; /*,
                 safety = 100*/
 
@@ -9001,12 +9001,12 @@ if (Vel) {
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while validating ' + dateObject.obj + '.'
-=======
+
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while validating ' + dateObject.obj + '.'
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
         /*safety -= 1
         if ( !safety ) {
             throw 'Fell into an infinite loop while validating ' + dateObject.obj + '.'
@@ -9049,11 +9049,11 @@ if (Vel) {
  
   /**
    * Check if a date is disabled.
-=======
+
   /**
    * Check if a date is disabled.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if a date is disabled.
     */
@@ -9096,11 +9096,11 @@ if (Vel) {
  
   /**
    * Parse a string into a usable type.
-=======
+
   /**
    * Parse a string into a usable type.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Parse a string into a usable type.
     */
@@ -9151,11 +9151,11 @@ if (Vel) {
  
   /**
    * Various formats to display the object in.
-=======
+
   /**
    * Various formats to display the object in.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Various formats to display the object in.
     */
@@ -9268,11 +9268,11 @@ if (Vel) {
  
   /**
    * Check if two date units are the exact.
-=======
+
   /**
    * Check if two date units are the exact.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if two date units are the exact.
     */
@@ -9302,11 +9302,11 @@ if (Vel) {
  
   /**
    * Check if two date units overlap.
-=======
+
   /**
    * Check if two date units overlap.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Check if two date units overlap.
     */
@@ -9337,11 +9337,11 @@ if (Vel) {
  
   /**
    * Flip the “enabled” state.
-=======
+
   /**
    * Flip the “enabled” state.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Flip the “enabled” state.
     */
@@ -9354,11 +9354,11 @@ if (Vel) {
  
   /**
    * Mark a collection of dates as “disabled”.
-=======
+
   /**
    * Mark a collection of dates as “disabled”.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Mark a collection of dates as “disabled”.
     */
@@ -9412,11 +9412,11 @@ if (Vel) {
  
   /**
    * Mark a collection of dates as “enabled”.
-=======
+
   /**
    * Mark a collection of dates as “enabled”.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Mark a collection of dates as “enabled”.
     */
@@ -9506,11 +9506,11 @@ if (Vel) {
  
   /**
    * Create a string for the nodes in the picker.
-=======
+
   /**
    * Create a string for the nodes in the picker.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * Create a string for the nodes in the picker.
     */
@@ -9781,11 +9781,11 @@ if (Vel) {
  
   /**
    * The date picker defaults.
-=======
+
   /**
    * The date picker defaults.
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
   /**
    * The date picker defaults.
     */
@@ -9880,8 +9880,8 @@ if (Vel) {
   *
   * Further modified
   * Copyright 2015 Ching Yaw Hao.
-=======
-=======
+
+
    /**
    * Extend the picker to add the date picker.
    */
@@ -9896,7 +9896,7 @@ if (Vel) {
   * Copyright 2015 Ching Yaw Hao.
  
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-=======
+
    */
 
 (function ($) {

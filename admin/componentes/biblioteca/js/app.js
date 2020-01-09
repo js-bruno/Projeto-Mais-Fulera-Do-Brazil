@@ -35,6 +35,24 @@ $(document).on("click", "#barraLateral .livroEdicao form i", () => {
 });
 
 
+// abrir e fechar (alugarLivro livro)
+$(document).on("click", ".principal .lista-container .alugar-livro", () => {
+  $("#barraLateral").addClass("active");
+  $("#barraLateral .overlay").addClass("active");
+  $("#barraLateral .alugarLivro form").addClass("active");
+  $("#barraLateral .alugarLivro form i").addClass("active");
+  $("#barraLateral .alugarLivro form .conteudo-form").addClass("active");
+});
+
+$(document).on("click", "#barraLateral .alugarLivro form i", () => {
+  $("#barraLateral").removeClass("active");
+  $("#barraLateral .overlay").removeClass("active");
+  $("#barraLateral .alugarLivro form").removeClass("active");
+  $("#barraLateral .alugarLivro form i").removeClass("active");
+  $("#barraLateral .alugarLivro form .conteudo-form").removeClass("active");
+});
+
+
 
 
 // Fechar formulários através do overlay
@@ -54,15 +72,6 @@ $(document).on("click", "#barraLateral .overlay", () => {
 
 
 $(document).on("click",".principal .lista-container .deletar-genero",function(){
-<<<<<<< HEAD
-    confirm("deseja realmente apagar este genero?");
-});
-$(document).on("click",".principal .lista-container .deletar-autor",function(){
-  confirm("deseja realmente apagar este autor?");
-});
-$(document).on("click",".principal .lista-container .deletar-livro",function(){
-  confirm("deseja realmente apagar este livro?");
-=======
     confirm("Deseja realmente apagar este genero?");
 });
 $(document).on("click",".principal .lista-container .deletar-autor",function(){
@@ -70,5 +79,4 @@ $(document).on("click",".principal .lista-container .deletar-autor",function(){
 });
 $(document).on("click",".principal .lista-container .deletar-livro",function(){
   confirm("Deseja realmente apagar este livro?");
->>>>>>> testeCarol
 });

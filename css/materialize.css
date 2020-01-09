@@ -2482,7 +2482,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 /* Radio Buttons
-   ========================================================================== */
+   ==== */
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
@@ -2605,7 +2605,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 /* Checkboxes
-   ========================================================================== */
+   ==== */
 /* CUSTOM CSS CHECKBOXES */
 
 
@@ -2797,7 +2797,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 /* Switch
-   ========================================================================== */
+   ==== */
 .switch,
 .switch * {
   -webkit-tap-highlight-color: transparent;
@@ -2894,7 +2894,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 }
 
 /* Select Field
-   ========================================================================== */
+   ==== */
 select {
   display: none;
 }
@@ -3050,7 +3050,7 @@ select:disabled {
 }
 
 /* File Input
-   ========================================================================== */
+   ==== */
 .file-field {
   position: relative;
 }
@@ -3094,7 +3094,7 @@ select:disabled {
 }
 
 /* Range
-   ========================================================================== */
+   ==== */
 .range-field {
   position: relative;
 }
@@ -4406,9 +4406,9 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-/* ==========================================================================
+/* ====
    $BASE-PICKER
-   ========================================================================== */
+   ==== */
 /**
  * Note: the root picker element should *NOT* be styled more than what's here.
  */
@@ -4576,9 +4576,9 @@ input[type=range]:focus::-ms-fill-upper {
 /**
  * For `large` screens, transform into an inline picker.
  */
-/* ==========================================================================
+/* ====
    CUSTOM MATERIALIZE STYLES
-   ========================================================================== */
+   ==== */
 .picker__input.picker__input--active {
   border-color: #E3F2FD;
 }
@@ -4608,9 +4608,9 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-/* ==========================================================================
+/* ====
    $BASE-DATE-PICKER
-   ========================================================================== */
+   ==== */
 /**
  * The picker box.
  */
@@ -4890,9 +4890,9 @@ input[type=range]:focus::-ms-fill-upper {
   border-top-color: #aaaaaa;
 }
 
-/* ==========================================================================
+/* ====
    CUSTOM MATERIALIZE STYLES
-   ========================================================================== */
+   ==== */
 /*.picker__box {
   border-radius: 2px;
   overflow: hidden;
@@ -5049,9 +5049,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-color: #a1ded8;
 }
 
-/* ==========================================================================
+/* ====
    $BASE-TIME-PICKER
-   ========================================================================== */
+   ==== */
 /**
  * The list of times.
  */
@@ -5162,9 +5162,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   color: #fff;
 }
 
-/* ==========================================================================
+/* ====
    $DEFAULT-TIME-PICKER
-   ========================================================================== */
+   ==== */
 /**
  * The frame the bounds the time picker.
  */
@@ -5188,9 +5188,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
 }
 
-/* ==========================================================================
+/* ====
    $DEFAULT-TIME-PICKER
-   ========================================================================== */
+   ==== */
 .clockpicker-display {
   font-size: 4rem;
   font-weight: bold;
