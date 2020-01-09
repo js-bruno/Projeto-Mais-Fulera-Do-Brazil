@@ -188,7 +188,7 @@ $sql = $pdo->query($sql);
           <label>Usuario</label>
           <input type="text">
           <!-- Onde vai ficar os usuarios -->
-          <input type="submit" value="Atualizar">
+          <input type="submit" value="Alugar">
         </div>
       </form>
     </div>
