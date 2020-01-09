@@ -54,6 +54,7 @@ $(document).on("click", "#barraLateral .overlay", () => {
 
 
 $(document).on("click",".principal .lista-container .deletar-genero",function(){
+<<<<<<< HEAD
     confirm("deseja realmente apagar este genero?");
 });
 $(document).on("click",".principal .lista-container .deletar-autor",function(){
@@ -61,4 +62,13 @@ $(document).on("click",".principal .lista-container .deletar-autor",function(){
 });
 $(document).on("click",".principal .lista-container .deletar-livro",function(){
   confirm("deseja realmente apagar este livro?");
+=======
+    confirm("Deseja realmente apagar este genero?");
+});
+$(document).on("click",".principal .lista-container .deletar-autor",function(){
+  confirm("Deseja realmente apagar este autor?");
+});
+$(document).on("click",".principal .lista-container .deletar-livro",function(){
+  confirm("Deseja realmente apagar este livro?");
+>>>>>>> testeCarol
 });

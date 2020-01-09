@@ -73,13 +73,7 @@ try {
     ?>
       </tbody>
     </table>
-    <div class="lista-paginacao">
-      <div class="item"><a href="#"><i class="fas fa-angle-left"></i></a></div>
-      <div class="item"><span>01</span></div>
-      <div class="item"><a href="#"><i class="fas fa-angle-right"></i></a></div>
-    </div>
-  </div>
-</div>
+    
 <div id="barraLateral">
     <div class="overlay"></div>
     <div class="novoLivro">

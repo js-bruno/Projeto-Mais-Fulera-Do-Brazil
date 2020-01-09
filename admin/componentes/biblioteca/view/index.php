@@ -17,7 +17,7 @@ try {
 <link rel="stylesheet" href="../../css/materialize.css">
 <div id="painel-componentes-biblioteca" class="painel-componentes-biblioteca principal">
   <div class="resumo">
-    <div class="total">
+    <div class="total" style="height:50px">
       <h4>Total</h4>
       <h5>
       <?php 
@@ -32,7 +32,7 @@ echo $total;
       </h5>
       <i class="fas fa-chart-line"></i>
     </div>
-      <div class="total">
+      <div class="total" style="height:50px">
         <h4>Total em uso</h4>
 
         <h5><?php 
@@ -120,12 +120,7 @@ echo $total;
     ?>
       </tbody>
     </table>
-    <div class="lista-paginacao">
-      <div class="item"><a href="#"><i class="fas fa-angle-left"></i></a></div>
-      <div class="item"><span>01</span></div>
-      <div class="item"><a href="#"><i class="fas fa-angle-right"></i></a></div>
-    </div>
-  </div>
+    <!--  -->
 </div>
 <div id="barraLateral">
     <div class="overlay"></div>
@@ -135,6 +130,23 @@ echo $total;
           <div class="conteudo-form">
           <label>Nome</label>
           <input type="text" name="nome_livro">
+         <select>
+<option>aaaa </option>
+         </select>
+          <?php
+$sql = "SELECT cod_autor,nome_autor FROM autores";
+$sql = $pdo->query($sql);
+// $sql = $sql->fetch();
+?>
+           <label>Autor</label>
+<select>
+ <?php foreach($sql->fetchAll() as $autores): ?>
+ <option value="<?php echo $autores['cod_autor'] ?>"><?php echo $autores['nome_autor'] ?></option>
+ <?php
+      endforeach;
+      ?> 
+ </select>
+
           
           <input type="submit" value="Cadastrar">
         </div>

@@ -521,11 +521,13 @@ nav .menu-lateral button{
   border: solid #e2e2e2 1px;
   color: #78ad78 ;
   width: 18%;
-<<<<<<< HEAD
+ 
+ 
 =======
   height: 50px;
 >>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
-  border-radius: 4px;
+=======
+   border-radius: 4px;
   text-align: left;
   transition: .2s ease;
   cursor: pointer;
