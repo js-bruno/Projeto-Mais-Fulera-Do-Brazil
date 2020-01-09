@@ -93,7 +93,7 @@ try {
            ?>
             <label>
             Não
-              <input type="checkbox" checked>
+              <input type="checkbox" checked disabled>
               <span class="lever"></span>
             Sim
             </label>
@@ -102,7 +102,7 @@ try {
             ?>
              <label>
             Não
-              <input type="checkbox">
+              <input type="checkbox" disabled>
               <span class="lever"></span>
             Sim
             </label>
@@ -132,34 +132,40 @@ try {
 </div>
 <div id="barraLateral">
     <div class="overlay"></div>
+    <!-- Ajeitar Criar Livro -->
     <div class="novoLivro">
       <form method="post" action="model.php?cadastro=true">
           <h4>Novo livro</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label>Nome</label>
           <input type="text" name="nome_livro">
-         <select>
-<option>aaaa </option>
-         </select>
           <?php
-$sql = "SELECT cod_autor,nome_autor FROM autores";
-$sql = $pdo->query($sql);
-// $sql = $sql->fetch();
-?>
+              $sql = "SELECT cod_autor,nome_autor FROM autores";
+              $sql = $pdo->query($sql);
+              // $sql = $sql->fetch();
+              $sql2 = "SELECT cod_genero,nome_genero FROM genero";
+              $sql2 = $pdo->query($sql2);
+          ?>
            <label>Autor</label>
-<select>
- <?php foreach($sql->fetchAll() as $autores): ?>
- <option value="<?php echo $autores['cod_autor'] ?>"><?php echo $autores['nome_autor'] ?></option>
- <?php
-      endforeach;
-      ?> 
- </select>
+          <select style="display:block;" name="cod_autor">
+            <?php foreach($sql->fetchAll() as $autores): ?>
+              <option value="<?php echo $autores['cod_autor'] ?>"><?php echo $autores['nome_autor'] ?></option>
+            <?php endforeach; ?> 
+          </select>
+
+          <label>Genero</label>
+          <select style="display:block;" name="cod_genero">
+            <?php foreach($sql2->fetchAll() as $generos): ?>
+              <option value="<?php echo $generos['cod_genero'] ?>"><?php echo $generos['nome_genero'] ?></option>
+            <?php endforeach; ?> 
+          </select>
 
           
           <input type="submit" value="Cadastrar">
         </div>
       </form>
     </div>
+    <!-- Ajeitar Editar Livro -->
     <div class="livroEdicao">
       <form>
           <h4>Editar livro</h4><i class="fas fa-times"></i>
@@ -177,23 +183,24 @@ $sql = $pdo->query($sql);
 
     <div class="alugarLivro">
       <form>
+      <!-- Alugar -->
       <?php 
-
         $sql2 = "SELECT * from usuarios";
         $sql2 = $pdo->query($sql2);
-
+        $usuarios = $sql2->fetchAll();
       ?>
           <h4>Alugar</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
-          <label>Usuario</label>
-          <input type="text">
+          <select style="display: block;">
+            <?php foreach($usuarios as $usuario){ ?>
+                <option><?php print(($usuario['nome_usu']))?></option>
+            <?php  }?>
+          </select>
+
+
           <!-- Onde vai ficar os usuarios -->
           <input type="submit" value="Alugar">
         </div>
       </form>
     </div>
   </div>
-    
- 
-  
-  

@@ -12,8 +12,8 @@ $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
       ':cod_livro' => 0,
       ':nome_livro' => $_POST['nome_livro'],
       ':status_livro' => 0,
-      ':cod_genero' => 6,
-      ':cod_autor' => 3,
+      ':cod_genero' => $_POST['cod_genero'],
+      ':cod_autor' => $_POST['cod_autor'],
     
   
     ));
