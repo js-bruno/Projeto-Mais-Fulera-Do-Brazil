@@ -63,6 +63,7 @@ try {
           <th>Autor</th>
           <th>Gênero</th>
           <th>Em uso</th>
+          <th>Responsavel</th>
           <th> - </th>
         </tr>
       </thead>
@@ -73,13 +74,18 @@ try {
       
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
-          $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
           $sqlA = "SELECT nome_autor FROM autores WHERE cod_autor =".$livros['cod_autor'];
           $sqlA = $pdo->query($sqlA);
-          $sqlG = $pdo->query($sqlG);
           $sqlA = $sqlA->fetch();
+
+          $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
+          $sqlG = $pdo->query($sqlG);
           $sqlG = $sqlG->fetch();
           
+          $sqlAl = "SELECT cod_usu FROM alugar WHERE cod_livro =".$livros['cod_livro'];
+          $sqlAl =$pdo->query($sqlAl);
+          $sqlAl = $sqlAl->fetch();
+          $usu=$sqlAl['cod_usu']
          ?>
       <tr>
         <td><?php print($livros['cod_livro']) ?></td>
@@ -109,6 +115,8 @@ try {
             <?php 
           }
           ?>
+          <td>
+          <?php print($sqlAl['cod_usu']) ?></td> 
           </div>
         </td>
         <td>
