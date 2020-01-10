@@ -71,7 +71,7 @@
     <script src="./biblioteca/js/app.js"></script>            
     <script>
       function carregarInicio(){
-        $("main").load("./biblioteca/view/index.php");
+        $("main").load("./biblioteca/view/emprestimos.php");
       }
       carregarInicio();
       listarResumoAcessorios();

@@ -1,4 +1,3 @@
-
 <?php
 try {
     $pdo = new PDO("mysql:dbname=biblioteca;host=localhost", "root", "");
@@ -12,40 +11,45 @@ try {
   ?>
 
 
-  
-
-
 <link rel="stylesheet" href="../../css/materialize.css">
 <div id="painel-componentes-biblioteca" class="painel-componentes-biblioteca principal">
   <div class="resumo">
-    <div class="total">
+    <div class="total" style="height:50px">
       <h4>Total</h4>
       <h5>
-       <?php 
-      $sql = "SELECT count(*) as t FROM genero";
-      $sql = $pdo->query($sql);
-      $sql = $sql->fetch();
-      $total = $sql['t'];
-      echo $total;
-?>
-        </h5>
+        <?php 
+          //Contagem de livros
+          $sql = "SELECT count(*) as t FROM genero";
+          $sql = $pdo->query($sql);
+          $sql = $sql->fetch();
+          $total = $sql['t'];
+          echo $total;
+        ?>
+      
+      
+      </h5>
      
-      <i class="fas fa-chart-line"></i>
-    </div>
+      <i class="fas fa-chart-bar"></i>
+      </div>
       <button><i class="fas fa-plus"></i> Adicionar</button>
     <form>
-      <input placeholder="Procurar por nome" type="search" name="pesquisa">
+      <input placeholder="Procurar" type="search">
       <i class="fas fa-search"></i>
     </form>
   </div>
+
   <div class="lista-container">
     <h2>Biblioteca</h2>
     <table>
       <thead>
         <tr>
-          <th>Codigo do Gênero</th>
-          <th>Nome</th>
+        <th></th>
+          <th>Codigo do livro</th>
+          <th></th>
+          <th>Gênero</th>
+          <th></th>
           <th> - </th>
+
         </tr>
       </thead>
       <tbody>
@@ -60,8 +64,11 @@ try {
           
          ?>
       <tr>
+      <td></td>
         <td><?php print($sqlA['cod_genero']) ?></td>
+        <td></td>
         <td><?php print($sqlA['nome_genero']) ?></td>
+        <td></td>
         <td>
           <?php echo "<i class='fas fa-pen editar-livro'> </i> <a href=model.php?IIDGG=".$genero['cod_genero'].">  </a>"?>
           <?php echo "<a href=model.php?IIDG=".$genero['cod_genero']."> <i class='fas fa-trash deletar-genero'> </i>  </a>"?>

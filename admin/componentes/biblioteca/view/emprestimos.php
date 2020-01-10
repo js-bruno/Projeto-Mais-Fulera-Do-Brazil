@@ -17,22 +17,7 @@ try {
 <link rel="stylesheet" href="../../css/materialize.css">
 <div id="painel-componentes-biblioteca" class="painel-componentes-biblioteca principal">
   <div class="resumo">
-    <div class="total" style="height:50px">
-      <h4>Total</h4>
-      <h5>
-        <?php 
-          //Contagem de livros
-          $sql = "SELECT count(*) as t FROM livros";
-          $sql = $pdo->query($sql);
-          $sql = $sql->fetch();
-          $total = $sql['t'];
-          echo $total;
-        ?>
-      
-      
-      </h5>
-      <i class="fas fa-chart-line"></i>
-    </div>
+    
       <div class="total" style="height:50px">
         <h4>Total em uso</h4>
 
@@ -47,7 +32,7 @@ try {
         ?></h5>
         <i class="fas fa-chart-bar"></i>
       </div>
-      <button><i class="fas fa-plus"></i> Adicionar</button>
+      <button><i class="fas fa-plus"></i> Alugar</button>
     <form>
       <input placeholder="Procurar" type="search">
       <i class="fas fa-search"></i>
@@ -58,61 +43,38 @@ try {
     <table>
       <thead>
         <tr>
-          <th>Codigo do livro</th>
-          <th>Nome</th>
-          <th>Autor</th>
-          <th>Gênero</th>
-          <th>Em uso</th>
-          <th> - </th>
+          <th>Codigo de Empréstimo</th>
+          <th></th>
+          <th>Nome do Usuário</th>
+          <th></th>
+          <th> Livro </th>
+          <th>opçoes</th>
         </tr>
       </thead>
       <tbody>
       <?php
-       $sql = "SELECT * FROM livros";
+       $sql = "SELECT * FROM alugar";
        $sql = $pdo->query($sql);
       
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
-          $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
-          $sqlA = "SELECT nome_autor FROM autores WHERE cod_autor =".$livros['cod_autor'];
-          $sqlA = $pdo->query($sqlA);
+          $sqlG = "SELECT nome_livro FROM livros WHERE cod_livro =".$livros['cod_livro'];
+        //   $sqlA = "SELECT nome_autor FROM autores WHERE cod_autor =".$livros['cod_autor'];
+        //   $sqlA = $pdo->query($sqlA);
           $sqlG = $pdo->query($sqlG);
-          $sqlA = $sqlA->fetch();
+        //   $sqlA = $sqlA->fetch();
           $sqlG = $sqlG->fetch();
           
          ?>
       <tr>
+        <td><?php print($livros['cod_aluguel']) ?></td>
+        <td></td>
         <td><?php print($livros['cod_livro']) ?></td>
-        <td><?php print($livros['nome_livro']) ?></td>
-        <td><?php print($sqlA['nome_autor']) ?></td>
-        <td><?php print($sqlG['nome_genero']) ?></td> 
+        <td></td>
+        <td><?php print($livros['cod_usu']) ?></td>
+        
         <td>
-          <div class="switch">
-          <?php 
-          if($livros['status_livro'] == 1){
-           ?>
-            <label>
-            Não
-              <input type="checkbox" checked disabled>
-              <span class="lever"></span>
-            Sim
-            </label>
-          <?php 
-          }else{
-            ?>
-             <label>
-            Não
-              <input type="checkbox" disabled>
-              <span class="lever"></span>
-            Sim
-            </label>
-            <?php 
-          }
-          ?>
-          </div>
-        </td>
-        <td>
-          <i class="fas fa-pen alugar-livro "href="" >ALUGAR</i>
+          <i class="fas fa-check" style="color:#618a74"></i>
           <i class="fas fa-pen editar-livro"></i>
           <?php echo "<a href=model.php?IID=".$livros['cod_livro']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
@@ -123,11 +85,6 @@ try {
     ?>
       </tbody>
     </table>
-    <!-- <div class="lista-paginacao">
-      <div class="item"><a href="#"><i class="fas fa-angle-left"></i></a></div>
-      <div class="item"><span>01</span></div>
-      <div class="item"><a href="#"><i class="fas fa-angle-right"></i></a></div>
-    </div> -->
   </div>
 </div>
 <div id="barraLateral">
@@ -135,30 +92,33 @@ try {
     <!-- Ajeitar Criar Livro -->
     <div class="novoLivro">
       <form method="post" action="model.php?cadastro=true">
-          <h4>Novo livro</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
-          <label>Nome</label>
-          <input type="text" name="nome_livro">
-          <?php
-              $sql = "SELECT cod_autor,nome_autor FROM autores";
-              $sql = $pdo->query($sql);
-              // $sql = $sql->fetch();
-              $sql2 = "SELECT cod_genero,nome_genero FROM genero";
-              $sql2 = $pdo->query($sql2);
-          ?>
-           <label>Autor</label>
-          <select style="display:block;" name="cod_autor">
-            <?php foreach($sql->fetchAll() as $autores): ?>
-              <option value="<?php echo $autores['cod_autor'] ?>"><?php echo $autores['nome_autor'] ?></option>
-            <?php endforeach; ?> 
+          <?php 
+        $sql2 = "SELECT * from usuarios";
+        $sql3 = "SELECT * from livros WHERE status_livro=0";
+        $sql2 = $pdo->query($sql2);
+        $sql3 = $pdo->query($sql3);
+        $usuarios = $sql2->fetchAll();
+        $livros = $sql3->fetchAll();
+
+      ?>
+          <h4>Alugar</h4><i class="fas fa-times"></i>
+          <div class="conteudo-form">
+          <label >Usuário</label>
+          <select style="display: block;">
+            <?php foreach($usuarios as $usuario){ ?>
+                <option><?php print(($usuario['nome_usu']))?></option>
+            <?php  }?>
           </select>
-<br>
-          <label>Genero</label>
-          <select style="display:block;" name="cod_genero">
-            <?php foreach($sql2->fetchAll() as $generos): ?>
-              <option value="<?php echo $generos['cod_genero'] ?>"><?php echo $generos['nome_genero'] ?></option>
-            <?php endforeach; ?> 
+          <label >Livro</label>
+          <select style="display: block;">
+            <?php foreach($livros as $livro){ ?>
+                <option><?php print(($livro['nome_livro']))?></option>
+            <?php  }?>
           </select>
+
+
+        
 
           
           <input type="submit" value="Cadastrar">
@@ -186,14 +146,29 @@ try {
       <!-- Alugar -->
       <?php 
         $sql2 = "SELECT * from usuarios";
+        $sql3 = "SELECT * from livros WHERE status_livro=0";
         $sql2 = $pdo->query($sql2);
+        $sql3 = $pdo->query($sql3);
         $usuarios = $sql2->fetchAll();
+        $livros = $sql3->fetchAll();
+
       ?>
           <h4>Alugar</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
+          <label >Usuário</label>
           <select style="display: block;">
             <?php foreach($usuarios as $usuario){ ?>
+            <option>Selecione </option>
                 <option><?php print(($usuario['nome_usu']))?></option>
+            <?php  }?>
+          </select>
+          <br>
+          <label >Livro</label>
+          <select style="display: block;">
+            <?php foreach($livros as $livro){ ?>
+                <option>Selecione </option>
+
+                <option><?php print(($livro['nome_livro']))?></option>
             <?php  }?>
           </select>
 
