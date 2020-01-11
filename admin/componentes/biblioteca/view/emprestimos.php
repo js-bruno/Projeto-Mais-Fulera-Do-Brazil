@@ -76,7 +76,7 @@ try {
         <td>
           <i class="fas fa-check" style="color:#618a74"></i>
           <i class="fas fa-pen editar-livro"></i>
-          <?php echo "<a href=model.php?IID=".$livros['cod_livro']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
+          <?php echo "<a href=model.php?IIDE=".$livros['cod_aluguel']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
       </tr>
      <?php
@@ -157,16 +157,18 @@ try {
           <div class="conteudo-form">
           <label >Usuário</label>
           <select style="display: block;">
+          <option>Selecione </option>
+
             <?php foreach($usuarios as $usuario){ ?>
-            <option>Selecione </option>
                 <option><?php print(($usuario['nome_usu']))?></option>
             <?php  }?>
           </select>
           <br>
           <label >Livro</label>
           <select style="display: block;">
+          <option>Selecione </option>
+
             <?php foreach($livros as $livro){ ?>
-                <option>Selecione </option>
 
                 <option><?php print(($livro['nome_livro']))?></option>
             <?php  }?>

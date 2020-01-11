@@ -72,11 +72,11 @@ $(document).on("click", "#barraLateral .overlay", () => {
 
 
 $(document).on("click",".principal .lista-container .deletar-genero",function(){
-    confirm("Deseja realmente apagar este genero?");
+    confirm("Deseja realmente apagar?");
 });
 $(document).on("click",".principal .lista-container .deletar-autor",function(){
-  confirm("Deseja realmente apagar este autor?");
+  confirm("Deseja realmente apagar?");
 });
 $(document).on("click",".principal .lista-container .deletar-livro",function(){
-  confirm("Deseja realmente apagar este livro?");
+  confirm("Deseja realmente apagar?");
 });

@@ -105,11 +105,11 @@ try {
     <div class="overlay"></div>
     <!-- Ajeitar Criar Livro -->
     <div class="novoLivro">
-      <form method="post" action="model.php?cadastro=true">
+      <form method="post" action="model.php?genero=true">
           <h4>Novo Gênero</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label>Nome</label>
-          <input type="text" name="nome_livro">
+          <input type="text" name="nome_genero">
          
            
 
@@ -121,14 +121,11 @@ try {
     <!-- Ajeitar Editar Livro -->
     <div class="livroEdicao">
       <form>
-          <h4>Editar livro</h4><i class="fas fa-times"></i>
+          <h4>Editar gênero</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label>Nome</label>
-          <input type="text">
-          <label>Nome</label>
-          <input type="text">
-          <label>Nome</label>
-          <input type="text">
+          <input type="text" name="nome_genero">
+         
           <input type="submit" value="Atualizar">
         </div>
       </form>

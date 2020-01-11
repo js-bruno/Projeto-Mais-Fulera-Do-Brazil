@@ -1,11 +1,14 @@
 # o que tem que fazer
 
-- [X] Crud de livro
-- [ ] Crud de genero
-- [ ] Crudo de Aluno
-- [X] Listar livros
-- [ ] Pesquisar Livros
-- [X] Colocar o total de livro
+- [ ] Pesquisar Livros, Genero e Autor
+- [ ] Cadastrar livros com os valores do select
+- [ ] Colocar os emprestimos para aparecer de acordo com nome e não código
+- [ ] Editar gênero, livro e autor
+- [ ] Cadastrar e editar empréstimo
+- [ ] Checkout de Emprestimo
+- [X] Cadastrar gênero e autor
+- [X] Excluir gênero, livro, autor e emprestimo
+
 
 <img src="https://user-images.githubusercontent.com/30533809/72170799-49953f80-33b0-11ea-94cd-d1801337fa09.jpeg" alt="drawing" width="200"/>
 <img src="https://user-images.githubusercontent.com/30533809/72168787-9a0a9e00-33ac-11ea-9437-e115e8c672eb.jpeg" alt="drawing" width="200"/>

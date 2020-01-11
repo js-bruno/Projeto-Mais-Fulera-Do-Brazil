@@ -89,7 +89,7 @@ try {
         <td></td>
         <td>
         <?php echo "<i class='fas fa-pen editar-autor'> </i> <a href=model.php?IIDGG=".$autores['cod_autor'].">  </a>"?>
-          <?php echo "<a href=model.php?IIDG=".$autores['cod_autor']."> <i class='fas fa-trash deletar-autor'> </i>  </a>"?>
+          <?php echo "<a href=model.php?IIDA=".$autores['cod_autor']."> <i class='fas fa-trash deletar-autor'> </i>  </a>"?>
 
         </td>
       </tr>
@@ -106,11 +106,11 @@ try {
     <div class="overlay"></div>
     <!-- Ajeitar Criar Livro -->
     <div class="novoLivro">
-      <form method="post" action="model.php?cadastro=true">
+      <form method="post" action="model.php?autor=true">
           <h4>Novo Autor</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label>Nome</label>
-          <input type="text" name="nome_livro">
+          <input type="text" name="nome_autor">
          
            
 
