@@ -11,5 +11,5 @@
 - [X] Excluir gênero, livro, autor, aluno e emprestimo
 
 
-<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi67s32vfrmAhV6JLkGHWDpAMYQjRx6BAgBEAQ&url=https%3A%2F%2Fweheartit.com%2Fentry%2F321668894&psig=AOvVaw1lgrYkR3lFLPeEy4L-afDZ&ust=1578795510913944" alt="drawing" width="200"/>
+<img src="https://data.whicdn.com/images/321668894/original.jpg" alt="drawing" width="200"/>
 
