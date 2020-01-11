@@ -12,15 +12,15 @@
 <body>
   <div id="login-container">
     <div class="login">
-      <form>
+      <form method="POST" action="login.php" id="formlogin" name="formlogin">
         <div class="indeterminate"></div>
         <h2>Entrar</h2>
         <i class="fas fa-book-reader"></i>
         <label>Login</label>
-        <input type="text" name="login" placeholder="Login" required>
+        <input type="text" name="login" id="login" placeholder="Login" required>
         <label>Senha</label>
-        <input id="pass" type="password" name="senha" placeholder="Sua senha" required><i class="fas fa-eye"></i>
-        <input type="submit" value="Entrar">
+        <input id="pass" type="password" name="senha" id="senha" placeholder="Sua senha" required><i class="fas fa-eye"></i>
+        <input type="submit" value="entrar" id="entrar">
       </form>
     </div>
   </div>
