@@ -6,7 +6,6 @@ $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
 
   if(isset($_GET['cadastro'])){
  
-    
     $stmt = $pdo  -> prepare('INSERT INTO livros (cod_livro, nome_livro, status_livro, cod_genero, cod_autor)  values (:cod_livro,:nome_livro,:status_livro,:cod_genero,:cod_autor)');
     $stmt->execute(array(
       ':cod_livro' => 0,
@@ -14,15 +13,25 @@ $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
       ':status_livro' => 0,
       ':cod_genero' => $_POST['cod_genero'],
       ':cod_autor' => $_POST['cod_autor'],
-    
   
     ));
-
-
 
     header('location:index.php');
   }
 
+  if(isset($_GET['cadaluno'])){
+ 
+    $stmt = $pdo  -> prepare('INSERT INTO usuarios (cod_usu, nome_usu, curso_usu, turma_usu)  values (:cod_usu,:nome_usu,:curso_usu,:turma_usu)');
+    $stmt->execute(array(
+      ':cod_usu' => 0,
+      ':nome_usu' => $_POST['nome_usu'],
+      ':curso_usu' => $_POST['curso_usu'],
+      ':turma_usu' => $_POST['turma_usu'],
+  
+    ));
+
+    header('location:alunos.php');
+  }
 
   if(isset($_GET['autor'])){
  
