@@ -84,10 +84,11 @@ try {
       
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
+          
           $sqlA = "SELECT nome_autor FROM autores WHERE cod_autor =".$livros['cod_autor'];
           $sqlA = $pdo->query($sqlA);
           $sqlA = $sqlA->fetch();
-
+          
           $sqlG = "SELECT nome_genero FROM genero WHERE cod_genero =".$livros['cod_genero'];
           $sqlG = $pdo->query($sqlG);
           $sqlG = $sqlG->fetch();
@@ -95,7 +96,17 @@ try {
           $sqlAl = "SELECT cod_usu FROM alugar WHERE cod_livro =".$livros['cod_livro'];
           $sqlAl =$pdo->query($sqlAl);
           $sqlAl = $sqlAl->fetch();
-          $usu=$sqlAl['cod_usu']
+          
+          if($sqlAl==NULL){
+            $usu = "Sem Responsavel";
+          }else{
+            $usu=$sqlAl['cod_usu'];
+            $sqlUs = "SELECT nome_usu from usuarios where cod_usu = ".$usu;
+            $sqlUs = $pdo->query($sqlUs);
+            $sqlUs = $sqlUs->fetch();
+            $usu = $sqlUs['nome_usu'];
+          }
+          
          ?>
       <tr>
         <td><?php print($livros['cod_livro']) ?></td>
@@ -126,12 +137,14 @@ try {
           }
           ?>
           <td>
-          <?php print($sqlAl['cod_usu']) ?></td> 
+          <?php print($usu) ?></td> 
           </div>
         </td>
         <td>
-          <i class="fas fa-pen alugar-livro "href="" >ALUGAR</i>
+          <i class='fas fa-address-book alugar-livro'></i>
+          
           <i class="fas fa-pen editar-livro"></i>
+          
           <?php echo "<a href=model.php?IID=".$livros['cod_livro']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
       </tr>
@@ -214,8 +227,6 @@ try {
                 <option><?php print(($usuario['nome_usu']))?></option>
             <?php  }?>
           </select>
-
-
           <!-- Onde vai ficar os usuarios -->
           <input type="submit" value="Alugar">
         </div>

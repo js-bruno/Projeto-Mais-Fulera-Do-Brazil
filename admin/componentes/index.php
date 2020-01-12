@@ -4,7 +4,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="../../css/style.css">
-      
       <!-- <link rel="stylesheet" href="../../materialize.css"> -->
     <title>Biblioteca Adelino</title>
   </head>
@@ -52,12 +51,11 @@
             <div class="menu-acessos">
                 <h6>Acessos</h6>
                 <ul>
-                li><i class="fas fa-book-open"></i><a href="index.php">Livros</a></li>
-                  <li><i class="fas fa-bookmark"></i><a href="genero.php">Gêneros</a></li>
+                <li><i class="fas fa-book-open"></i><a href="./index.php">Livros</a></li>
+                  <li><i class="fas fa-bookmark"></i><a href="./genero.php">Gêneros</a></li>
                   <li><i class="fas fa-book-reader"></i><a href="autores.php">Autores</a></li>
                   <li><i class="fas fa-users"></i></i><a href="alunos.php">Alunos</a></li>
                   <li><i class="fas fa-list-alt"></i></i><a href="emprestimos.php">Empréstimos</a></li>
-
                 </ul>
             </div>
           </div>
@@ -80,6 +78,7 @@
       $(document).on("click", ".menu-superior ul li i", () => {
         window.location.href = "./sair.php";
       })
+      
     </script>
   </body>
 </html>
