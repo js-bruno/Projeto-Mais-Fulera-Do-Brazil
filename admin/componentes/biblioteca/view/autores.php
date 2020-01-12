@@ -51,7 +51,7 @@ try {
     </form>
   </div>
   <div class="lista-container">
-    <h2>Biblioteca</h2>
+    <h2>Autores</h2>
     <table>
       <thead>
         <tr>

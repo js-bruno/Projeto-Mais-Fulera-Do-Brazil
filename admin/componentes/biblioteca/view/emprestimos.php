@@ -39,7 +39,7 @@ try {
     </form>
   </div>
   <div class="lista-container">
-    <h2>Biblioteca</h2>
+    <h2>Empréstimos</h2>
     <table>
       <thead>
         <tr>
@@ -58,25 +58,31 @@ try {
       
        if($sql->rowCount() > 0){
          foreach($sql->fetchAll() as $livros):
-          $sqlG = "SELECT nome_livro FROM livros WHERE cod_livro =".$livros['cod_livro'];
-        //   $sqlA = "SELECT nome_autor FROM autores WHERE cod_autor =".$livros['cod_autor'];
-        //   $sqlA = $pdo->query($sqlA);
-          $sqlG = $pdo->query($sqlG);
-        //   $sqlA = $sqlA->fetch();
-          $sqlG = $sqlG->fetch();
+          // $sqlG = "SELECT nome_livro FROM livros WHERE cod_livro =".$livros['cod_livro'];
+          // $sqlG = $pdo->query($sqlG);
+          // $sqlG = $sqlG->fetch();
+
+          $sqlUsu = "SELECT nome_usu from usuarios where cod_usu =".$livros['cod_usu'];
+          $sqlUsu = $pdo->query($sqlUsu);
+          $sqlUsu = $sqlUsu->fetch();
+          $nome_usu = $sqlUsu['nome_usu'];
           
+          $sqlLiv = "SELECT nome_livro from livros where cod_livro=".$livros['cod_livro'];
+          $sqlLiv = $pdo->query($sqlLiv);
+          $sqlLiv = $sqlLiv->fetch();
+          $nome_livro = $sqlLiv['nome_livro']
          ?>
       <tr>
-        <td><?php print($livros['cod_aluguel']) ?></td>
+        <td><?php print($livros['cod_alugar']) ?></td>
         <td></td>
-        <td><?php print($livros['cod_livro']) ?></td>
-        <td></td>
-        <td><?php print($livros['cod_usu']) ?></td>
-        
+        <td><?php print($nome_usu)?></td>
+        <td><?php print($nome_livro)?></td>
+        <td><?php  ?></td>
+
         <td>
           <i class="fas fa-check" style="color:#618a74"></i>
           <i class="fas fa-pen editar-livro"></i>
-          <?php echo "<a href=model.php?IIDE=".$livros['cod_aluguel']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
+          <?php echo "<a href=model.php?IIDE=".$livros['cod_alugar']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
       </tr>
      <?php

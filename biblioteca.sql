@@ -2,8 +2,8 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 05-Jan-2020 às 01:25
+-- Host: localhost
+-- Tempo de geração: 12-Jan-2020 às 08:10
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.1
 
@@ -29,16 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alugar` (
-  `cod_livro` int(200) NOT NULL,
-  `cod_usu` int(200) NOT NULL
+  `cod_alugar` int(222) NOT NULL,
+  `cod_usu` int(200) NOT NULL,
+  `cod_livro` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `alugar`
 --
 
-INSERT INTO `alugar` (`cod_livro`, `cod_usu`) VALUES
-(3, 3);
+INSERT INTO `alugar` (`cod_alugar`, `cod_usu`, `cod_livro`) VALUES
+(4, 2, 39);
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,9 @@ CREATE TABLE `autores` (
 --
 
 INSERT INTO `autores` (`cod_autor`, `nome_autor`) VALUES
-(3, 'Machado de Assis');
+(3, 'Machado de Assis'),
+(4, '32'),
+(5, 'BIXAO');
 
 -- --------------------------------------------------------
 
@@ -85,7 +88,10 @@ CREATE TABLE `genero` (
 --
 
 INSERT INTO `genero` (`cod_genero`, `nome_genero`) VALUES
-(6, 'Ficção');
+(2, 'Sexo Argiloso'),
+(6, 'Ficção'),
+(7, '321321'),
+(8, 'PUTARIA');
 
 -- --------------------------------------------------------
 
@@ -106,7 +112,8 @@ CREATE TABLE `livros` (
 --
 
 INSERT INTO `livros` (`cod_livro`, `nome_livro`, `status_livro`, `cod_genero`, `cod_autor`) VALUES
-(3, 'Bananas de Pijama', NULL, 6, 3);
+(39, 'Dom Quixote, Miguel de Cervantes', 0, 6, 3),
+(41, '31', 0, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -137,11 +144,18 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`cod_usu`, `nome_usu`, `curso_usu`) VALUES
+(2, 'José Bruno Da Silva Do Nascimento', 'INFORDESGRAÇA'),
 (3, 'Nara Hévila Costa Carvalho', 'Informática');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `alugar`
+--
+ALTER TABLE `alugar`
+  ADD PRIMARY KEY (`cod_alugar`);
 
 --
 -- Índices para tabela `autores`
@@ -180,22 +194,28 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `alugar`
+--
+ALTER TABLE `alugar`
+  MODIFY `cod_alugar` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de tabela `autores`
 --
 ALTER TABLE `autores`
-  MODIFY `cod_autor` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cod_autor` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `cod_genero` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `cod_genero` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `cod_livro` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cod_livro` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de tabela `login`
