@@ -33,10 +33,7 @@ try {
         <i class="fas fa-chart-bar"></i>
       </div>
       <button><i class="fas fa-plus"></i> Alugar</button>
-    <form>
-      <input placeholder="Procurar" type="search">
-      <i class="fas fa-search"></i>
-    </form>
+    
   </div>
   <div class="lista-container">
     <h2>Empréstimos</h2>
@@ -46,8 +43,8 @@ try {
           <th>Codigo de Empréstimo</th>
           <th></th>
           <th>Nome do Usuário</th>
-          <th></th>
-          <th> Livro </th>
+          <th>Livro</th>
+          <th>  </th>
           <th>opçoes</th>
         </tr>
       </thead>

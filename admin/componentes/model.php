@@ -3,7 +3,6 @@
 
 $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
 
-
   if(isset($_GET['cadastro'])){
  
     $stmt = $pdo  -> prepare('INSERT INTO livros (cod_livro, nome_livro, status_livro, cod_genero, cod_autor)  values (:cod_livro,:nome_livro,:status_livro,:cod_genero,:cod_autor)');

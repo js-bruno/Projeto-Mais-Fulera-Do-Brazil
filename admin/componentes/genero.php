@@ -25,7 +25,7 @@
             <li><i class="fas fa-cog"></i></li>
           </ul>
         </div>
-        <div class="sub-menu-editar">
+        <!-- <div class="sub-menu-editar">
           <div class="editar-content">
             <div class="header-editar">
               <h6>Editar Conta</h6>
@@ -42,11 +42,11 @@
               <button><i class="fas fa-save"></i> Salvar</button>
             </form>
           </div>
-        </div>
+        </div> -->
         <div class="menu-lateral active">
           <div class="manu-lateral-content">
             <div class="menu-dados">
-                <h6>Seja bem-vindo </h6><i class="fas fa-pen"></i>
+                <h6>Seja Bem-Vindo </h6>
               
             </div>
             <div class="menu-acessos">

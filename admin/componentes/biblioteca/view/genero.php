@@ -45,10 +45,7 @@ try {
     </div>
   
       <button><i class="fas fa-plus"></i> Adicionar</button>
-    <form>
-      <input placeholder="Procurar" type="search">
-      <i class="fas fa-search"></i>
-    </form>
+   
   </div>
   <div class="lista-container">
     <h2>Gêneros</h2>
@@ -87,7 +84,7 @@ try {
         </td>
         <td></td>
         <td>
-        <?php echo "<i class='fas fa-pen editar-livro'> </i> <a href=model.php?IIDGG=".$genero['cod_genero'].">  </a>"?>
+        <?php echo "<i class='fas fa-pen editar-livro'> </i> <a href=model.php?editarg=".$genero['cod_genero'].">  </a>"?>
           <?php echo "<a href=model.php?IIDG=".$genero['cod_genero']."> <i class='fas fa-trash deletar-genero'> </i>  </a>"?>
 
         </td>
@@ -120,7 +117,7 @@ try {
     </div>
     <!-- Ajeitar Editar Livro -->
     <div class="livroEdicao">
-      <form>
+      <form method="post">
           <h4>Editar gênero</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label>Nome</label>
@@ -130,7 +127,6 @@ try {
         </div>
       </form>
     </div>
-
     <div class="alugarLivro">
       <form>
       <!-- Alugar -->

@@ -14,7 +14,7 @@ if(mysql_num_rows ($result) > 0 )
 {
     $_SESSION['login'] = $login;
     $_SESSION['senha'] = $senha;
-    header('location:admin/componentes/biblioteca/view/index.php');
+    header('location:./biblioteca/view/index.php');
 }
 else{
   alert("Login ou senha incorretos!");

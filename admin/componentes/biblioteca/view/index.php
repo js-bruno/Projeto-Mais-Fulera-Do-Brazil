@@ -58,10 +58,7 @@ try {
         <i class="fas fa-chart-bar"></i>
       </div>
       <button><i class="fas fa-plus"></i> Adicionar</button>
-    <form>
-      <input placeholder="Procurar" type="search">
-      <i class="fas fa-search"></i>
-    </form>
+    
   </div>
   <div class="lista-container">
     <h2>Biblioteca</h2>
@@ -141,7 +138,7 @@ try {
           </div>
         </td>
         <td>
-          <i class='fas fa-address-book alugar-livro'></i>
+          <i class='fas fa-address-book alugar-livro' style=color:#618a74></i>
           
           <i class="fas fa-pen editar-livro"></i>
           

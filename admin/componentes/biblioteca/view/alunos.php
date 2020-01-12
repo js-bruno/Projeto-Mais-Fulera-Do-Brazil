@@ -45,10 +45,7 @@ try {
     </div>
   
       <button><i class="fas fa-plus"></i> Adicionar</button>
-    <form>
-      <input placeholder="Procurar" type="search">
-      <i class="fas fa-search"></i>
-    </form>
+    
   </div>
   <div class="lista-container">
     <h2>Alunos</h2>
