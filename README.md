@@ -1,7 +1,6 @@
-# o que tem que fazer
+# O que falta fazer
 
-- [ ] Pesquisar Livros, Genero e Autor
-- [ ] Cadastrar livros com os valores do select
+- [X] Cadastrar livros com os valores do select
 - [X] Colocar os emprestimos para aparecer de acordo com nome e não código
 - [ ] Colocar o curso de aluno de acordo com a tabela de curso
 - [ ] Editar gênero, livro, aluno e autor

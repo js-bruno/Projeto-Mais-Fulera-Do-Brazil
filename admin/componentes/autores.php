@@ -46,7 +46,7 @@
         <div class="menu-lateral active">
           <div class="manu-lateral-content">
             <div class="menu-dados">
-                <h6>Seja bem-vindo </h6><i class="fas fa-pen"></i>
+                <h6>Seja Bem-Vindo </h6>
               
             </div>
             <div class="menu-acessos">
