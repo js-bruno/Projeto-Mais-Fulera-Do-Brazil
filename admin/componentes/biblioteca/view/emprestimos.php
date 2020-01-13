@@ -35,7 +35,7 @@ try {
       <button><i class="fas fa-plus"></i> Alugar</button>
       <form method='post' action="emprestimos.php">
       <div class="conteudo-form">
-      <input type='search' placeholder='Pesquisar' name='pesquisa' >
+      <!-- <input type='search' placeholder='Pesquisar' name='pesquisa' > -->
       </div>
       </form>
   </div>
