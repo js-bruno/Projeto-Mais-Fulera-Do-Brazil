@@ -12,7 +12,7 @@
 <body>
   <div id="login-container">
     <div class="login">
-      <form method="POST" action="login.php" id="formlogin" name="formlogin">
+      <form method="POST" action="log.php?login=true">
         <div class="indeterminate"></div>
         <h2>Entrar</h2>
         <i class="fas fa-book-reader"></i>
@@ -20,7 +20,8 @@
         <input type="text" name="login" id="login" placeholder="Login" required>
         <label>Senha</label>
         <input id="pass" type="password" name="senha" id="senha" placeholder="Sua senha" required><i class="fas fa-eye"></i>
-        <input type="submit" value="entrar" id="entrar">
+        <!-- <input type="submit" value="entrar" id="entrar"> -->
+        <input type="submit">
       </form>
     </div>
   </div>
@@ -30,8 +31,15 @@
       <p>Suporte <i class="fas fa-headset"></i></p>
     </div>
   </footer>
-  <script src="js/jquery.js"></script>
+  <!-- <script src="js/jquery.js"></script> -->
   <script src="js/materialize.js"></script>
-  <script src="js/login.js"></script>
+  <!-- <script src="js/login.js"></script> -->
+  <script>
+  window.onload = () => {
+   document.querySelector('.login').classList.add('active');
+   document.querySelector('.login form').classList.add('active');
+   document.querySelector('footer .rodape').classList.add('active');
+
+  }</script>
 </body>
 </html>

@@ -6,7 +6,7 @@ document.querySelector('#login-container .login form').addEventListener("submit"
       document.querySelector('#login-container .login form').classList.remove('progress');
    }, 4000);
 
-   login();
+   // login();
 
 });
 window.onload = () => {
