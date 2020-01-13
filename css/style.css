@@ -1,0 +1,925 @@
+/* Estilizações globais */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+body,html{
+  background-color: rgb(233, 238, 241);
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #969696;
+}
+
+
+
+/* Menu superior */
+.menu-superior{
+  position: fixed;
+  width: 100%;
+  height: 46px;
+  background-color: #4f924b;
+  padding-right: 30px;
+  z-index: 200;
+}
+ .menu-superior ul li{
+   float: right;
+   padding: 5px;
+
+ }
+ .menu-superior ul li i{
+   color: rgb(255, 255, 255);
+   padding: 10px;
+   cursor: pointer;
+   font-size: 14pt;
+   z-index: 100;
+ }
+.menu-superior ul li::before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  margin-left: 1px;
+  width: 35px;
+  height: 35px;
+  background-color: #79bb79c2;
+  border-radius: 50%;
+  transform: scale(0.0);
+  transition: .2s ease;
+  z-index: -100;
+}
+ .menu-superior ul li:hover::before{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* Abrir e Fechar menu */
+.abrir-menu{
+  margin-top: 280px;
+  right: -18px;
+  width: 50px;
+  height: 50px;
+  background-color: #4f924b;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.abrir-menu i {
+  margin-top: 17px;
+  margin-left: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: .5s;
+
+}
+
+.abrir-menu i.active{
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+/* Menu lateral */
+nav{
+  position: fixed;
+  background-color: #4f924b;
+  width: 300px;
+  height: 100%;
+  z-index: 200;
+  left: -296px;
+  transition: .2s ease-in-out;
+}
+nav.active{
+  left: 0px;
+}
+
+nav .mini-menu-lateral{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 100%;
+  border-right: solid 2px #396b3773;
+  background-color: #3b7338;
+  z-index: 100;
+}
+
+nav .mini-menu-lateral ul{
+  position: relative;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav .mini-menu-lateral ul li{
+  padding: 10px;
+}
+nav .mini-menu-lateral ul li:nth-child(1){
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-size: 16pt;
+  color: #fff;
+  cursor: pointer;
+}
+nav .mini-menu-lateral ul li:nth-child(1)::after{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border: solid #f4fff678 2px;
+  background-color:#63a25f;
+  border-radius: 50%;
+  left: -6px;
+  top: -2px;
+  z-index: -100;
+}
+nav .mini-menu-lateral ul li:nth-child(2){
+  position: absolute;
+  bottom: 60px;
+  left: 16px;
+  font-size: 14pt;
+  color: #fff;
+  cursor: pointer;
+}
+nav .mini-menu-lateral ul li:nth-child(2)::after{
+  top: 2px;
+  left: 2px;
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #79bb79c2;
+  border-radius: 50%;
+  z-index: -100;
+  cursor: pointer;
+  transition: .3s ease;
+  transform: scale(0.0);
+}
+nav .mini-menu-lateral ul li:nth-child(2):hover::after{
+  transform: scale(1.1);
+}
+nav .mini-menu-lateral ul li:nth-child(3){
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  font-size: 14pt;
+  color: #fff;
+  cursor: pointer;
+}
+nav .mini-menu-lateral ul li:nth-child(3)::after{
+  top: 2px;
+  left: 2px;
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #79bb79c2;
+  border-radius: 50%;
+  z-index: -100;
+  cursor: pointer;
+  transition: .3s ease;
+  transform: scale(0.0);
+}
+nav .mini-menu-lateral ul li:nth-child(3):hover::after{
+  transform: scale(1.1);
+}
+nav .menu-lateral{
+  margin-left: 75px;
+  opacity: 0;
+  position: relative;
+  transition: .8s;
+
+}
+nav .menu-lateral.active{
+  opacity: 1;
+  transition-delay: .2s;
+}
+/* nav .manu-lateral-content{
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+} */
+nav .menu-lateral .menu-dados{
+  position: relative;
+  left: -5px;
+  padding: 10px;
+  width: 100%;
+  border-bottom: solid 2px #396b3773;
+}
+nav .menu-lateral .menu-dados h6{
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #fff;
+}
+nav .menu-lateral .menu-dados i{
+  position: absolute;
+  font-size: 12pt;
+  color: rgb(235, 235, 235);
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+}
+
+nav .menu-lateral .menu-dados i::after{
+  content: '';
+  top: -9px;
+  left: -9px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #79bb79c2;
+  border-radius: 50%;
+  z-index: -100;
+  transition: .3s ease;
+  transform-origin: center center;
+  transform: scale(0.0);
+  cursor: pointer;
+}
+nav .menu-lateral .menu-dados i:hover::after{
+  transform: scale(1.1);
+}
+nav .menu-lateral .menu-dados p{
+  font-size: 10pt;
+  font-weight: 300;
+  color: rgb(235, 235, 235);
+}
+nav .menu-lateral .menu-acessos{
+  position: absolute;
+  left: -5px;
+  padding-top: 10px;
+  width: 100%;
+  border-bottom: solid 2px #396b3773;
+}
+
+nav .menu-lateral .menu-acessos h6{
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #fff;
+}
+nav .menu-lateral .menu-acessos ul li{
+  position: relative;
+  transition: .4s;
+  cursor: pointer;
+}
+nav .menu-lateral .menu-acessos ul li:hover{
+  background-color: #467d43;
+}
+nav .menu-lateral .menu-acessos ul li a.active, nav .menu-lateral .menu-acessos ul li i.active{
+  color: #99f19c;
+}
+nav .menu-lateral .menu-acessos ul li a.active::after{
+  content: '';
+  top: 18px;
+  right: 20px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  background-color: #99f19c;
+}
+nav .menu-lateral .menu-acessos ul li i{
+  padding: 13px;
+  font-size: 13pt;
+  color: #fff;
+}
+nav .menu-lateral .menu-acessos ul li a{
+  font-size: 11pt;
+  color: #e1e8e6;
+}
+nav .sub-menu-editar{
+  left: -280px;
+  position: absolute;
+  width: 260px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 200;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.493);
+  transition: .2s ease;
+}
+nav .sub-menu-editar.active{
+  left: 0px;
+}
+nav .sub-menu-editar .editar-content{
+  padding: 10px;
+}
+nav .sub-menu-editar .header-editar{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .sub-menu-editar .editar-content p{
+  text-transform: uppercase;
+  color: #969292;
+  font-size: 10pt;
+  letter-spacing: -1px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+nav .sub-menu-editar .header-editar i{
+  position: relative;
+  cursor: pointer;
+  padding: 4px 10px 0px 0px;
+  color: #5c645d;
+  font-size: 15pt;
+}
+nav .sub-menu-editar .header-editar i::after{
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #79bb79c2;
+  border-radius: 50%;
+  top: -4px;
+  left: -10px;
+  z-index: -100;
+  transition: .3s ease;
+  transform-origin: center center;
+  transform: scale(0.0);
+}
+nav .sub-menu-editar .header-editar i:hover::after{
+  transform: scale(1.1);
+}
+nav .sub-menu-editar .header-editar h6{
+  font-size: 18pt;
+  font-weight: 300;
+  color: #3d3939;
+  line-height: 1.6;
+}
+nav .sub-menu-editar .editar-content label{
+  color: #3d3939;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10pt;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  display: block;
+}
+nav .sub-menu-editar form{
+  opacity: 0;
+  transition: .4s ease;
+}
+nav .sub-menu-editar form.active{
+  opacity: 1;
+  transition-delay: .3s;
+}
+nav .sub-menu-editar .editar-content input[type=text], .sub-menu-editar .editar-content input[type=password], .sub-menu-editar .editar-content input[type=email]{
+  width: 100%;
+  margin-bottom: 10px;
+  border: solid rgb(219, 212, 212) 2px;
+  background-color: #fff;
+  height: 30px;
+  transition: .3s ease;
+  outline: none;
+  border-radius: 4px;
+}
+nav .sub-menu-editar .editar-content button{
+  position: relative;
+  margin-top: 30px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #a4eca0;
+  color: #42773f;
+  cursor: pointer;
+  transition: .4s ease;
+}
+nav .sub-menu-editar .editar-content button:hover{
+  box-shadow: 2px 1px 4px 0px rgba(0, 0, 0, 0.16);
+}
+nav .sub-menu-editar .editar-content button i {
+  background-color: #6dca68;
+  padding: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+nav .sub-menu-editar .editar-content input:focus{
+  border: solid rgb(122, 180, 122) 2px;
+}
+nav .menu-lateral h1{
+  top: -120px;
+  left: -20px;
+  position: absolute;
+  color: #ffffff;
+  font-size: 58pt;
+  transition: .2s ease;
+}
+
+nav .menu-lateral h1.active{
+  transition-delay: .2s;
+  left: 70px;
+}
+
+nav .menu-lateral button{
+  position: absolute;
+  padding: 5px;
+  bottom: -75%;
+  left: 20%;
+}
+
+
+
+
+
+
+
+/* Main Componentes */
+
+.principal .resumo{
+  display: flex;
+  padding: 30px;
+  width: 77.2% !important;
+  height: 20%;
+  position: relative;
+  background-color: #fff;
+  transition: .1s;
+  border-radius: 8px;
+  top: -20px;
+  margin-left: 22.5%;
+}
+.principal .resumo.active{
+  margin-left: 0%;
+  width: 100% !important;
+  padding: 30px;
+}
+.principal .resumo form input{
+  position: absolute;
+  top: 42%;
+  right: 15%;
+  padding: 6px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid rgb(201, 194, 194) 2px;
+  width: 13%;
+  outline: none;
+  padding: 5px;
+  transition: .4s ease;
+}
+.principal .resumo form input:focus{
+  width: 20%;
+  border-color: #72b36ff1;
+}
+.principal .resumo form input:focus ~  i{
+  color: #569953e5 !important;
+}
+.principal .resumo form i{
+  position: absolute;
+  top: 44%;
+  right: 15%;
+  padding: 0px;
+  border-radius: 4px;
+  color: rgb(104, 100, 100);
+}
+
+.principal .resumo .total{
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  border: solid #e2e2e2 1px;
+  color: #78ad78 ;
+  width: 18%;
+ 
+ 
+
+  height: 50px;
+>>>>>>> f7b8ab25656ee12d4ea3145e12c4acba3081181f
+
+   border-radius: 4px;
+  text-align: left;
+  transition: .2s ease;
+  cursor: pointer;
+}
+.principal .resumo .total:hover{
+  border-color: #8ace86;
+  color: #72b36ff1;
+}
+.principal .resumo .total i{
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  font-size: 22pt;
+}
+
+main .principal{
+  padding: 80px 18px 10px 28px;
+  position: absolute;
+  height: 100%;
+  width: 100%
+}
+.principal .resumo button{
+  margin-top: 15px;
+  margin-left: 85%;
+  position: absolute;
+  background-color: #74c96f;
+  color: #ffffff;
+  padding-right: 10px;
+  border: none;
+  width: 102px;
+  border-radius: 4px;
+  text-align: center;
+  transition: .4s ease;
+  cursor: pointer;
+  outline: none;
+}
+.principal .resumo button:hover{
+  box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.31);
+}
+.principal .resumo button i{
+  padding: 10px;
+  background-color: #4f924b;
+  color: #fff;
+  font-size: 9pt;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+main .lista-container{
+  overflow: auto;
+  padding: 20px;
+  width: 77.2% !important;
+  height: 80%;
+  position: relative;
+  background-color: #fff;
+  transition: .1s;
+  border-radius: 8px;
+  margin-bottom: 100px;
+  margin-left: 22.5%;
+}
+main .lista-container.active{
+  padding: 20px;
+  width: 100% !important;
+  margin-left: 0%;
+}
+main .painel-componentes td i{
+  color: red;
+}
+main .lista-container h2{
+  font-weight: 300;
+  color: rgb(92, 92, 92);
+}
+
+
+
+
+
+
+
+/* Table lista */
+main .lista-container table{
+  padding: 10px;
+  margin-top: 40px;
+  border-collapse: collapse;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+main .lista-container table thead tr{
+  background-color: #4f924b;
+  color: rgba(252, 252, 252, 0.945);
+  font-weight: 700;
+}
+
+main .lista-container table thead tr th{
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-family: 'Roboto', sans-serif;
+}
+main .lista-container table thead tr th:nth-child(1){
+  border-top-left-radius: 5px;
+}
+
+main .lista-container table thead tr th:nth-child(2){
+  text-align: left;
+}
+main .lista-container table thead tr th:nth-child(3){
+  text-align: left;
+}
+main .lista-container table thead tr th:nth-child(4){
+  text-align: left;
+}
+main .lista-container table thead tr th:nth-child(5){
+  text-align: left;
+}
+main .lista-container table thead tr th:nth-child(6){
+  text-align: center;
+  border-top-right-radius: 5px;
+}
+
+/* main .lista-container table tbody::after{
+  content: 'dsdsdsadasd';
+} */
+/* main .lista-container table tbody.active{
+  display: none;
+} */
+
+main .lista-container table tbody tr td{
+  font-size: 11pt;
+  padding: 10px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+main .lista-container table tbody tr:nth-child(even){
+  background-color: rgba(219, 219, 219, 0.562);
+}
+main .lista-container table tbody tr td:nth-child(1){
+  text-align: center;
+}
+main .lista-container table tbody tr td:nth-child(5){
+  text-align: left;
+}
+main .lista-container table tbody tr td:nth-child(6){
+  text-align: center;
+}
+main .lista-container table tbody tr td i{
+  padding: 8px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+main .lista-container table tbody tr td .fa-trash{
+  color: #618a74;
+}
+main .lista-container table tbody tr td .fa-trash::after{
+  z-index: -100;
+  cursor: pointer;
+  content: '';
+  top:  -1px;
+  right: -0.8px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a1daa1a3;
+  transition: .3s ease;
+  transform: scale(0.0);
+  transform-origin: center center;
+}
+main .lista-container table tbody tr td .fa-trash:hover::after{
+  transform: scale(1.1);
+}
+
+
+
+
+main .lista-container table tbody tr td i{
+  padding: 8px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+main .lista-container table tbody tr td .fa-pen{
+  color: #618a74;
+  color: #517963;
+}
+main .lista-container table tbody tr td .fa-pen::after{
+  z-index: -100;
+  cursor: pointer;
+  content: '';
+  top:  -1px;
+  right: -0.2px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a1daa1a3;
+  transform: scale(0.0);
+  transition: .3s ease;
+}
+main .lista-container table tbody tr td .fa-pen:hover::after{
+  transform: scale(1.1);
+  color: rgb(245, 239, 239);
+}
+
+
+
+/* Paginação */
+.lista-paginacao{
+  margin-top: 20px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+.lista-paginacao .item{
+  padding: 10px;
+}
+.lista-paginacao .item a{
+  text-transform: uppercase;
+  color: #618a74;
+}
+.lista-paginacao .item span{
+  color: #618a74;
+  font-weight: 700;
+}
+.lista-paginacao .item .fa-angle-left{
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 17pt;
+  z-index: 100;
+  position: relative;
+}
+
+.lista-paginacao .item .fa-angle-right{
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 17pt;
+  z-index: 100;
+  position: relative;
+
+}.lista-paginacao .item .fa-angle-left::after{
+  content: '';
+  transform: scale(0.0);
+  margin-top: -5px;
+  margin-left: -21px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #a1daa1a3;
+  border-radius: 50%;
+  transition: .3s ease;
+  z-index: -10;
+}
+.lista-paginacao .item .fa-angle-left:hover::after{
+  transform: scale(1.1);
+}
+.lista-paginacao .item .fa-angle-right::after{
+  content: '';
+  transform: scale(0.0);
+  margin-top: -5px;
+  margin-left: -22px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #a1daa1a3;
+  border-radius: 50%;
+  transition: .3s ease;
+  z-index: -10;
+}
+.lista-paginacao .item .fa-angle-right:hover::after{
+  transform: scale(1.1);
+}
+
+
+
+/* Barra lateral - formulários */
+main #barraLateral{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 200;
+  visibility: hidden;
+}
+main #barraLateral.active{
+  visibility: visible;
+}
+main #barraLateral .overlay{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.493);
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+}
+main #barraLateral .overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+main #barraLateral form{
+  top: 0;
+  left: calc(100vw - 0px);
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 0px rgba(36, 35, 35, 0.425);
+  transition: .3s cubic-bezier(.84,.34,.1,.78);
+}
+main #barraLateral form.active{
+  left: calc(100vw - 320px);
+}
+main #barraLateral form .conteudo-form{
+  transition: .3s ease-in;
+  opacity: 0;
+}
+main #barraLateral form .conteudo-form.active{
+  transition-delay: .4s;
+  opacity: 1;
+}
+main #barraLateral form h4{
+  color: #3d3939;
+  font-size: 18pt;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+}
+main #barraLateral form i {
+  font-size: 17pt;
+  color:#5c645d;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+main #barraLateral form i.active{
+  transform: rotate(270deg);
+  transition-delay: .2s;
+}
+
+main #barraLateral form label{
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  font-size: 10pt;
+  font-weight: 700;
+  color: rgb(65, 65, 65);
+  letter-spacing: 1px;
+}
+main #barraLateral form input[type=text], input[type=email], input[type=password]{
+  padding: 5px;
+  width: 100%;
+  border: solid rgb(224, 224, 224) 2px;
+  outline: none;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  color:  rgb(121, 121, 121);
+  line-height: 1.4;
+  font-weight: 300;
+  transition: all .3s ease;
+}
+
+main #barraLateral input[type=text]:focus,input[type=email]:focus, input[type=password]:focus{
+  border: solid #4f924b 2px;
+}
+
+main #barraLateral form input[type=submit]{
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4f924b;
+  color: rgb(236, 235, 235);
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: .3s ease;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-weight: 700;
+  width: 100%;
+}
+main #barraLateral form input[type=submit]:hover{
+  background-color: #448541;
+  box-shadow: 0px 1px 5px 1px rgb(168, 168, 168);
+
+}
