@@ -138,7 +138,7 @@ try {
           </div>
         </td>
         <td>
-          <i class='fas fa-address-book alugar-livro' style=color:#618a74></i>
+          <!-- <i class='fas fa-address-book alugar-livro' style=color:#618a74></i> -->
           
           <!-- <i class="fas fa-pen editar-livro"></i> -->
           

@@ -121,10 +121,26 @@ if(isset($_GET['IIDU'])){
 
 if(isset($_GET['IIDE'])){
   $ID = $_GET['IIDE'];
+  $updateQuery = "SELECT cod_livro from alugar where cod_emp =".$ID;
+  $updateQuery = $pdo->query($updateQuery);
+  $updateQuery = $updateQuery->fetchAll();
+  $IDLIVRO = $updateQuery[0]['cod_livro'];
+  // print(var_dump($IDLIVRO));
+
+
   $stmt = $pdo  -> prepare('delete from alugar where cod_emp = :ID');
   $stmt->bindParam(':ID', $ID); 
-$stmt->execute();
-header('location:emprestimos.php');
+  $stmt->execute();
+
+  $stmt2 = $pdo -> prepare('delete from alugar where cod_usu = :ID');
+  $stmt2->bindParam(':ID', $ID); 
+  $stmt2->execute();
+  
+  $stmt3 = $pdo->prepare('update livros set status_livro=0 where cod_livro=:IDLIVRO');
+  $stmt3->bindParam(':IDLIVRO', $IDLIVRO); 
+  $stmt3->execute();
+  
+  header('location:emprestimos.php');
 }
 
 if(isset($_GET['IIDG'])){

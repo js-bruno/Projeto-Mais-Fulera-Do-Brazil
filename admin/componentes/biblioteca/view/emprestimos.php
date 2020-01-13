@@ -49,7 +49,7 @@ try {
           <th></th>
           <th>Nome do Usuário</th>
           <th>Livro</th>
-          <th>Prazo</th>
+          <th></th>
           <th>opçoes</th>
         </tr>
       </thead>
@@ -81,9 +81,9 @@ try {
         <td><?php  ?></td>
 
         <td>
-          <i class="fas fa-check" style="color:#618a74"></i>
+          <!-- <i class="fas fa-check" style="color:#618a74"></i> -->
           <!-- <i class="fas fa-pen editar-livro"></i> -->
-          <?php echo "<a href=model.php?IIDE=".$livros['cod_emp']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
+          <?php echo "<a href=model.php?IIDE=".$livros['cod_emp']."> <i class='fas fa-check deletar-livro'style='color:#618a74' > </i>  </a>"?>
         </td>
       </tr>
      <?php
