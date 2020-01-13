@@ -76,24 +76,47 @@ $pdo = new PDO('mysql:dbname=biblioteca;host=localhost', 'root', '');
   if(isset($_GET['IID'])){
     $ID = $_GET['IID'];
     $stmt = $pdo  -> prepare('delete from livros where cod_livro = :ID');
+    $stmt2 = $pdo -> prepare('delete from alugar where cod_livro = :ID');
     $stmt->bindParam(':ID', $ID); 
-  $stmt->execute();
+    $stmt2->bindParam(':ID', $ID); 
+    $stmt->execute();
+    $stmt2->execute();
 	header('location:index.php');
 }
 if(isset($_GET['IIDA'])){
   $ID = $_GET['IIDA'];
   $stmt = $pdo  -> prepare('delete from autores where cod_autor = :ID');
   $stmt->bindParam(':ID', $ID); 
-$stmt->execute();
+  $stmt->execute();
+
+  $stmt2 = $pdo  -> prepare('delete from livros where cod_autor = :ID');
+  $stmt2->bindParam(':ID', $ID); 
+  $stmt2->execute();
+
 header('location:autores.php');
 }
 
 if(isset($_GET['IIDU'])){
   $ID = $_GET['IIDU'];
+  $updateQuery = "SELECT cod_livro from alugar where cod_usu =".$ID;
+  $updateQuery = $pdo->query($updateQuery);
+  $updateQuery = $updateQuery->fetchAll();
+  $IDLIVRO = $updateQuery[0]['cod_livro'];
+
   $stmt = $pdo  -> prepare('delete from usuarios where cod_usu = :ID');
   $stmt->bindParam(':ID', $ID); 
-$stmt->execute();
-header('location:alunos.php');
+  $stmt->execute();
+
+  $stmt2 = $pdo -> prepare('delete from alugar where cod_usu = :ID');
+  $stmt2->bindParam(':ID', $ID); 
+  $stmt2->execute();
+  
+  $stmt3 = $pdo->prepare('update livros set status_livro=0 where cod_livro=:IDLIVRO');
+  $stmt3->bindParam(':IDLIVRO', $IDLIVRO); 
+  $stmt3->execute();
+  
+
+  header('location:alunos.php');
 }
 
 if(isset($_GET['IIDE'])){
@@ -108,7 +131,14 @@ if(isset($_GET['IIDG'])){
   $ID = $_GET['IIDG'];
   $stmt = $pdo  -> prepare('delete from genero where cod_genero = :ID');
   $stmt->bindParam(':ID', $ID); 
-$stmt->execute();
+  $stmt->execute();
+
+  $stmt2 = $pdo  -> prepare('delete from livros where cod_genero = :ID');
+  $stmt2->bindParam(':ID', $ID); 
+  $stmt2->execute();
+
+
+
 header('location:genero.php');
 }
 

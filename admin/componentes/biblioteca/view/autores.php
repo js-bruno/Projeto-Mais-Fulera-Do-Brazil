@@ -85,7 +85,7 @@ try {
         </td>
         <td></td>
         <td>
-        <?php echo "<i class='fas fa-pen editar-autor'> </i> <a href=model.php?IIDGG=".$autores['cod_autor'].">  </a>"?>
+        <?php //echo "<i class='fas fa-pen editar-autor'> </i> <a href=model.php?IIDGG=".$autores['cod_autor'].">  </a>"?>
           <?php echo "<a href=model.php?IIDA=".$autores['cod_autor']."> <i class='fas fa-trash deletar-autor'> </i>  </a>"?>
 
         </td>

@@ -84,7 +84,7 @@ try {
         </td>
         <td></td>
         <td>
-        <?php echo "<i class='fas fa-pen editar-livro'> </i> <a href=model.php?editarg=".$genero['cod_genero'].">  </a>"?>
+        <?php // echo "<i class='fas fa-pen editar-livro'> </i> <a href=model.php?editarg=".$genero['cod_genero'].">  </a>"?>
           <?php echo "<a href=model.php?IIDG=".$genero['cod_genero']."> <i class='fas fa-trash deletar-genero'> </i>  </a>"?>
 
         </td>

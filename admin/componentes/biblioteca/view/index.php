@@ -140,7 +140,7 @@ try {
         <td>
           <i class='fas fa-address-book alugar-livro' style=color:#618a74></i>
           
-          <i class="fas fa-pen editar-livro"></i>
+          <!-- <i class="fas fa-pen editar-livro"></i> -->
           
           <?php echo "<a href=model.php?IID=".$livros['cod_livro']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>

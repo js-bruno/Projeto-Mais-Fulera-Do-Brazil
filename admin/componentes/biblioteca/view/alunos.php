@@ -87,7 +87,7 @@ try {
         <td><?php print($sqlA['curso_usu']) ?></td> 
 
         <td>
-        <?php echo "<i class='fas fa-pen editar-autor'> </i> <a href=model.php?IIDGG=".$autores['cod_usu'].">  </a>"?>
+        <?php // echo "<i class='fas fa-pen editar-autor'> </i> <a href=model.php?IIDGG=".$autores['cod_usu'].">  </a>"?>
           <?php echo "<a href=model.php?IIDU=".$autores['cod_usu']."> <i class='fas fa-trash deletar-autor'> </i>  </a>"?>
 
         </td>

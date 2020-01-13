@@ -82,7 +82,7 @@ try {
 
         <td>
           <i class="fas fa-check" style="color:#618a74"></i>
-          <i class="fas fa-pen editar-livro"></i>
+          <!-- <i class="fas fa-pen editar-livro"></i> -->
           <?php echo "<a href=model.php?IIDE=".$livros['cod_emp']."> <i class='fas fa-trash deletar-livro'> </i>  </a>"?>
         </td>
       </tr>
@@ -156,7 +156,6 @@ try {
         $livros = $sql3->fetchAll();
 
       ?>
-      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
           <h4>Alugar</h4><i class="fas fa-times"></i>
           <div class="conteudo-form">
           <label >Usuário</label>
